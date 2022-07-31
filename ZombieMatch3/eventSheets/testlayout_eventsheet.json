@@ -1,0 +1,154 @@
+{
+	"name": "TestLayout_EventSheet",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "ZombiesHealth",
+			"type": "number",
+			"initialValue": "3",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 612076365706383
+		},
+		{
+			"eventType": "variable",
+			"name": "CorpseMovementDirection",
+			"type": "number",
+			"initialValue": "1",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 811115987868147
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-click",
+					"objectClass": "Mouse",
+					"sid": 319358502343420,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 281992600601139,
+					"parameters": {
+						"object-to-create": "Sprite3",
+						"layer": "0",
+						"x": "Player.X",
+						"y": "Player.Y",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				}
+			],
+			"sid": 453845881652511
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Sprite3",
+					"sid": 255898540395804,
+					"parameters": {
+						"object": "zombie1"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "Sprite3",
+					"sid": 703046233256122
+				},
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 982279824125375,
+					"parameters": {
+						"variable": "ZombiesHealth",
+						"value": "-1"
+					}
+				}
+			],
+			"sid": 445197738759976
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-two-values",
+					"objectClass": "System",
+					"sid": 400210424777903,
+					"parameters": {
+						"first-value": "ZombiesHealth",
+						"comparison": 0,
+						"second-value": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "zombie1",
+					"sid": 954819116167703
+				},
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 535208054806273,
+					"parameters": {
+						"object-to-create": "ZombieCorpse",
+						"layer": "0",
+						"x": "zombie1.X-90",
+						"y": "zombie1.Y+100",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				}
+			],
+			"sid": 312789065453352
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Player",
+					"sid": 798317698011180,
+					"parameters": {
+						"object": "ZombieCorpse"
+					}
+				},
+				{
+					"id": "key-is-down",
+					"objectClass": "CoreMechanic",
+					"sid": 597276525022479,
+					"parameters": {
+						"key": 70
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "move-forward",
+					"objectClass": "ZombieCorpse",
+					"sid": 636730144036369,
+					"parameters": {
+						"distance": "15"
+					}
+				}
+			],
+			"sid": 866770092652414
+		}
+	],
+	"sid": 409331247530026
+}

@@ -1,0 +1,63 @@
+{
+	"name": "ZombieCorpse",
+	"plugin-id": "Sprite",
+	"sid": 630116746929236,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "solid",
+			"name": "Solid",
+			"sid": 774992186489744
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 210,
+						"height": 168,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 6123844,
+						"collisionPoly": {
+							"points": [
+								0,
+								0.8028333560398648,
+								0,
+								0.3273809183211555,
+								0.31876201375325525,
+								0.32492854872203997,
+								0.4928574335007439,
+								0.3259046256655737,
+								1,
+								0.3415476417541506,
+								1,
+								0.4672619501749675,
+								1,
+								0.8028333560398646,
+								0.4976190839494978,
+								0.7998570974440804
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 794144626312287,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

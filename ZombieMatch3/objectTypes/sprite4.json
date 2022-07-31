@@ -1,51 +1,40 @@
 {
-	"name": "Sprite3",
+	"name": "Sprite4",
 	"plugin-id": "Sprite",
-	"sid": 339806900811744,
+	"sid": 286325511344431,
 	"isGlobal": false,
 	"instanceVariables": [],
-	"behaviorTypes": [
-		{
-			"behaviorId": "Bullet",
-			"name": "Bullet",
-			"sid": 262206789032544
-		},
-		{
-			"behaviorId": "destroy",
-			"name": "DestroyOutsideLayout",
-			"sid": 289708719573753
-		}
-	],
+	"behaviorTypes": [],
 	"effectTypes": [],
 	"animations": {
 		"items": [
 			{
 				"frames": [
 					{
-						"width": 1280,
-						"height": 1280,
-						"originX": 0.49609375,
+						"width": 1600,
+						"height": 771,
+						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
-						"imageSpriteId": 5182718,
+						"imageSpriteId": 4915521,
 						"collisionPoly": {
 							"points": [
-								0.390625,
-								0.390625,
+								0,
+								0,
 								0.5,
-								0.390625,
-								0.9335937500000022,
-								0.39375,
-								0.99921875,
+								0,
+								0.999375,
+								0,
+								0.999375,
 								0.5,
-								0.9281250000000002,
-								0.60625,
+								0.999375,
+								0.9987029831387808,
 								0.5,
-								0.609375,
-								0.38984375,
-								0.609375,
+								0.9987029831387808,
+								0,
+								0.9987029831387808,
 								0,
 								0.5
 							]
@@ -54,7 +43,7 @@
 						"duration": 1
 					}
 				],
-				"sid": 870627716657460,
+				"sid": 693404695790574,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,
