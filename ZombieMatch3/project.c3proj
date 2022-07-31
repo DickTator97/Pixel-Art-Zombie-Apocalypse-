@@ -15,6 +15,14 @@
 			"bundled": false
 		},
 		{
+			"type": "plugin",
+			"id": "Mouse",
+			"name": "Mouse",
+			"author": "Scirra",
+			"version": "r302",
+			"bundled": false
+		},
+		{
 			"type": "behavior",
 			"id": "bound",
 			"name": "Bound to layout",
@@ -45,6 +53,14 @@
 			"author": "Scirra",
 			"version": "r302",
 			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Bullet",
+			"name": "Bullet",
+			"author": "Scirra",
+			"version": "r302",
+			"bundled": false
 		}
 	],
 	"uniqueId": "k0gny84s8l8",
@@ -54,7 +70,9 @@
 			"Player",
 			"zombie1",
 			"Sprite",
-			"Sprite2"
+			"Sprite2",
+			"Mouse",
+			"Sprite3"
 		],
 		"subfolders": []
 	},
