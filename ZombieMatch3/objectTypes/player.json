@@ -4,7 +4,23 @@
 	"sid": 992902147625369,
 	"isGlobal": false,
 	"instanceVariables": [],
-	"behaviorTypes": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "bound",
+			"name": "BoundToLayout",
+			"sid": 920570649509842
+		},
+		{
+			"behaviorId": "Platform",
+			"name": "Platform",
+			"sid": 726085828611656
+		},
+		{
+			"behaviorId": "Physics",
+			"name": "Physics",
+			"sid": 322341096291483
+		}
+	],
 	"effectTypes": [],
 	"animations": {
 		"items": [

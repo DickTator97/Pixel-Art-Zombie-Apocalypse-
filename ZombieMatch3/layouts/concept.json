@@ -1,5 +1,5 @@
 {
-	"name": "Layout 1",
+	"name": "Concept",
 	"layers": [
 		{
 			"name": "Layer 0",
@@ -7,22 +7,130 @@
 			"subLayers": [],
 			"instances": [
 				{
-					"type": "BackGround",
+					"type": "Sprite",
 					"properties": {
 						"initially-visible": true,
-						"initial-animation": "Default",
+						"initial-animation": "Animation 1",
 						"initial-frame": 0,
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 2,
+					"uid": 7,
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
 						"x": 960,
 						"y": 540,
-						"width": 1919.9999999999998,
+						"width": 1920,
 						"height": 1080,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Sprite2",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 8,
+					"instanceVariables": {},
+					"behaviors": {
+						"Solid": {
+							"properties": {
+								"enabled": true,
+								"tags": ""
+							}
+						}
+					},
+					"world": {
+						"x": 418,
+						"y": 979,
+						"width": 1010,
+						"height": 380,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Sprite2",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 9,
+					"instanceVariables": {},
+					"behaviors": {
+						"Solid": {
+							"properties": {
+								"enabled": true,
+								"tags": ""
+							}
+						}
+					},
+					"world": {
+						"x": 1268,
+						"y": 979,
+						"width": 1010,
+						"height": 380,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Sprite2",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 10,
+					"instanceVariables": {},
+					"behaviors": {
+						"Solid": {
+							"properties": {
+								"enabled": true,
+								"tags": ""
+							}
+						}
+					},
+					"world": {
+						"x": 2119,
+						"y": 979,
+						"width": 1010,
+						"height": 380,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -44,7 +152,7 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 4,
+					"uid": 11,
 					"instanceVariables": {},
 					"behaviors": {
 						"BoundToLayout": {
@@ -82,8 +190,8 @@
 						}
 					},
 					"world": {
-						"x": 284,
-						"y": 834,
+						"x": 135,
+						"y": 753,
 						"width": 172.78992507943053,
 						"height": 183.76071397336264,
 						"originX": 0.5,
@@ -107,7 +215,7 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 3,
+					"uid": 12,
 					"instanceVariables": {},
 					"behaviors": {
 						"BoundToLayout": {
@@ -139,141 +247,15 @@
 								"max-fall-speed": 1000,
 								"double-jump": false,
 								"jump-sustain": 0,
-								"default-controls": true,
+								"default-controls": false,
 								"enabled": true
 							}
 						}
 					},
 					"world": {
-						"x": 864,
-						"y": 666,
+						"x": 1216,
+						"y": 332,
 						"width": -168,
-						"height": 209,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "zombie1",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 5,
-					"instanceVariables": {},
-					"behaviors": {
-						"BoundToLayout": {
-							"properties": {
-								"bound-by": "edge"
-							}
-						},
-						"Physics": {
-							"properties": {
-								"immovable": false,
-								"collision-mask": "use-collision-polygon",
-								"prevent-rotation": false,
-								"density": 1,
-								"friction": 0.5,
-								"elasticity": 0.2,
-								"linear-damping": 0,
-								"angular-damping": 0.01,
-								"bullet": false,
-								"enabled": true
-							}
-						},
-						"Platform": {
-							"properties": {
-								"max-speed": 330,
-								"acceleration": 1500,
-								"deceleration": 1500,
-								"jump-strength": 650,
-								"gravity": 1500,
-								"max-fall-speed": 1000,
-								"double-jump": false,
-								"jump-sustain": 0,
-								"default-controls": true,
-								"enabled": true
-							}
-						}
-					},
-					"world": {
-						"x": 1609,
-						"y": 820,
-						"width": -168,
-						"height": 209,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "zombie1",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 6,
-					"instanceVariables": {},
-					"behaviors": {
-						"BoundToLayout": {
-							"properties": {
-								"bound-by": "edge"
-							}
-						},
-						"Physics": {
-							"properties": {
-								"immovable": false,
-								"collision-mask": "use-collision-polygon",
-								"prevent-rotation": false,
-								"density": 1,
-								"friction": 0.5,
-								"elasticity": 0.2,
-								"linear-damping": 0,
-								"angular-damping": 0.01,
-								"bullet": false,
-								"enabled": true
-							}
-						},
-						"Platform": {
-							"properties": {
-								"max-speed": 330,
-								"acceleration": 1500,
-								"deceleration": 1500,
-								"jump-strength": 650,
-								"gravity": 1500,
-								"max-fall-speed": 1000,
-								"double-jump": false,
-								"jump-sustain": 0,
-								"default-controls": true,
-								"enabled": true
-							}
-						}
-					},
-					"world": {
-						"x": 322.5,
-						"y": 360,
-						"width": 155,
 						"height": 209,
 						"originX": 0.5,
 						"originY": 0.5,
@@ -288,7 +270,7 @@
 					}
 				}
 			],
-			"sid": 563581285287694,
+			"sid": 285117075657428,
 			"effectTypes": [],
 			"isInitiallyVisible": true,
 			"isInitiallyInteractive": true,
@@ -317,14 +299,14 @@
 			"global": false
 		}
 	],
-	"sid": 180459174788156,
+	"sid": 251340735387831,
 	"nonworld-instances": [],
 	"effectTypes": [],
-	"width": 1920,
-	"height": 1080,
-	"unboundedScrolling": true,
+	"width": 3840,
+	"height": 2160,
+	"unboundedScrolling": false,
 	"vpX": 0.5,
 	"vpY": 0.5,
 	"projection": "perspective",
-	"eventSheet": "Event sheet 1"
+	"eventSheet": "Concept_EventSheet"
 }

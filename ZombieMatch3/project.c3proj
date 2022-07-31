@@ -13,6 +13,38 @@
 			"author": "Scirra",
 			"version": "r302",
 			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "bound",
+			"name": "Bound to layout",
+			"author": "Scirra",
+			"version": "r302",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Platform",
+			"name": "Platform",
+			"author": "Scirra",
+			"version": "r302",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Physics",
+			"name": "Physics",
+			"author": "Scirra",
+			"version": "r302",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "solid",
+			"name": "Solid",
+			"author": "Scirra",
+			"version": "r302",
+			"bundled": false
 		}
 	],
 	"uniqueId": "k0gny84s8l8",
@@ -20,7 +52,9 @@
 		"items": [
 			"BackGround",
 			"Player",
-			"zombie1"
+			"zombie1",
+			"Sprite",
+			"Sprite2"
 		],
 		"subfolders": []
 	},
@@ -32,13 +66,15 @@
 	},
 	"layouts": {
 		"items": [
-			"Layout 1"
+			"Layout 1",
+			"Concept"
 		],
 		"subfolders": []
 	},
 	"eventSheets": {
 		"items": [
-			"Event sheet 1"
+			"Event sheet 1",
+			"Concept_EventSheet"
 		],
 		"subfolders": []
 	},
