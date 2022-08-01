@@ -65,6 +65,19 @@
 			],
 			"actions": [
 				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 400715761159216,
+					"parameters": {
+						"object-to-create": "BloodSprite",
+						"layer": "0",
+						"x": "Sprite3.X",
+						"y": "Sprite3.Y",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
 					"id": "destroy",
 					"objectClass": "Sprite3",
 					"sid": 703046233256122

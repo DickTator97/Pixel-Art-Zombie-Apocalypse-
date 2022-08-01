@@ -93,7 +93,8 @@
 			"Sprite4",
 			"ground2d",
 			"Sprite5",
-			"CoreMechanic"
+			"CoreMechanic",
+			"BloodSprite"
 		],
 		"subfolders": []
 	},
