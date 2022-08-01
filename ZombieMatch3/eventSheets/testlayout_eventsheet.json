@@ -67,14 +67,22 @@
 				{
 					"id": "create-object",
 					"objectClass": "System",
-					"sid": 400715761159216,
+					"sid": 760482374988692,
 					"parameters": {
 						"object-to-create": "BloodSprite",
 						"layer": "0",
-						"x": "Sprite3.X",
-						"y": "Sprite3.Y",
+						"x": "zombie1.X - 25",
+						"y": "zombie1.Y",
 						"create-hierarchy": false,
 						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "rotate-counter-clockwise",
+					"objectClass": "BloodSprite",
+					"sid": 501064605421830,
+					"parameters": {
+						"degrees": "90"
 					}
 				},
 				{
@@ -89,6 +97,14 @@
 					"parameters": {
 						"variable": "ZombiesHealth",
 						"value": "-1"
+					}
+				},
+				{
+					"id": "set-default-color",
+					"objectClass": "BloodSprite",
+					"sid": 750856823167521,
+					"parameters": {
+						"color": "rgbEx(25, 2, 109)"
 					}
 				}
 			],
