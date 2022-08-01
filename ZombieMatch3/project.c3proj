@@ -31,6 +31,14 @@
 			"bundled": false
 		},
 		{
+			"type": "plugin",
+			"id": "Text",
+			"name": "Text",
+			"author": "Scirra",
+			"version": "r302",
+			"bundled": false
+		},
+		{
 			"type": "behavior",
 			"id": "bound",
 			"name": "Bound to layout",
@@ -93,7 +101,8 @@
 			"Sprite4",
 			"ground2d",
 			"Sprite5",
-			"CoreMechanic"
+			"CoreMechanic",
+			"MaxDistanceMonitor"
 		],
 		"subfolders": []
 	},

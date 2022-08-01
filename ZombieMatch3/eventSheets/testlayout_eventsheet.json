@@ -22,6 +22,16 @@
 			"sid": 811115987868147
 		},
 		{
+			"eventType": "variable",
+			"name": "MaxDistance",
+			"type": "number",
+			"initialValue": "20",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 306669355603573
+		},
+		{
 			"eventType": "block",
 			"conditions": [
 				{
@@ -121,19 +131,21 @@
 			"eventType": "block",
 			"conditions": [
 				{
-					"id": "on-collision-with-another-object",
-					"objectClass": "Player",
-					"sid": 798317698011180,
-					"parameters": {
-						"object": "ZombieCorpse"
-					}
-				},
-				{
 					"id": "key-is-down",
 					"objectClass": "CoreMechanic",
 					"sid": 597276525022479,
 					"parameters": {
 						"key": 70
+					}
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 223343720074771,
+					"parameters": {
+						"variable": "MaxDistance",
+						"comparison": 0,
+						"value": "distance(Player.X,Player.Y,ZombieCorpse.X,ZombieCorpse.Y)"
 					}
 				}
 			],
