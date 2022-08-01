@@ -42,6 +42,16 @@
 			"sid": 858860523072247
 		},
 		{
+			"eventType": "variable",
+			"name": "CurrentDistanceWithDirection",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 187040326160139
+		},
+		{
 			"eventType": "block",
 			"conditions": [
 				{
@@ -161,6 +171,15 @@
 			],
 			"actions": [
 				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 342434426224402,
+					"parameters": {
+						"variable": "CorpseMovementDirection",
+						"value": "-(Player.X-ZombieCorpse.X)/abs(Player.X-ZombieCorpse.X)"
+					}
+				},
+				{
 					"id": "set-position",
 					"objectClass": "ZombieCorpse",
 					"sid": 413974195078735,
@@ -192,63 +211,7 @@
 					}
 				}
 			],
-			"sid": 149077384091253,
-			"children": [
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "compare-two-values",
-							"objectClass": "System",
-							"sid": 484549315584360,
-							"parameters": {
-								"first-value": "1",
-								"comparison": 0,
-								"second-value": "CurrentDistance-CurrentDistance"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 382651492536742,
-							"parameters": {
-								"variable": "CorpseMovementDirection",
-								"value": "1"
-							}
-						}
-					],
-					"sid": 998193310190034
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "compare-two-values",
-							"objectClass": "System",
-							"sid": 977518402607060,
-							"parameters": {
-								"first-value": "-1",
-								"comparison": 0,
-								"second-value": "CurrentDistance-CurrentDistance"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 232326670813135,
-							"parameters": {
-								"variable": "CorpseMovementDirection",
-								"value": "-1"
-							}
-						}
-					],
-					"sid": 725479150765948
-				}
-			]
+			"sid": 149077384091253
 		}
 	],
 	"sid": 409331247530026
