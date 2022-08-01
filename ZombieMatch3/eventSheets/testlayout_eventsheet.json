@@ -23,6 +23,16 @@
 		},
 		{
 			"eventType": "variable",
+			"name": "DistanceMonitor",
+			"type": "string",
+			"initialValue": "distance(Player.X,Player.Y, ZombieCorpse.X,ZombieCorpse.Y)-distance(Player.X,Player.Y, ZombieCorpse.X,ZombieCorpse.Y)",
+			"comment": "Show the talented devs the distance value between player and corpse",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 834223652643006
+		},
+		{
+			"eventType": "variable",
 			"name": "MaxDistance",
 			"type": "number",
 			"initialValue": "20",
@@ -129,37 +139,65 @@
 		},
 		{
 			"eventType": "block",
+			"conditions": [],
+			"actions": [],
+			"sid": 866770092652414
+		},
+		{
+			"eventType": "block",
 			"conditions": [
 				{
 					"id": "key-is-down",
 					"objectClass": "CoreMechanic",
-					"sid": 597276525022479,
+					"sid": 425154980300717,
 					"parameters": {
 						"key": 70
 					}
 				},
 				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 951893155108347
+				},
+				{
+					"id": "compare-two-values",
+					"objectClass": "System",
+					"sid": 532628953993711,
+					"parameters": {
+						"first-value": "1",
+						"comparison": 0,
+						"second-value": "distance(Player.X,Player.Y, ZombieCorpse.X,ZombieCorpse.Y)-distance(Player.X,Player.Y, ZombieCorpse.X,ZombieCorpse.Y)"
+					}
+				},
+				{
 					"id": "compare-eventvar",
 					"objectClass": "System",
-					"sid": 223343720074771,
+					"sid": 904627420245287,
 					"parameters": {
 						"variable": "MaxDistance",
-						"comparison": 0,
+						"comparison": 2,
 						"value": "distance(Player.X,Player.Y,ZombieCorpse.X,ZombieCorpse.Y)"
 					}
 				}
 			],
 			"actions": [
 				{
-					"id": "move-forward",
-					"objectClass": "ZombieCorpse",
-					"sid": 636730144036369,
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 147801807928362,
 					"parameters": {
-						"distance": "15"
+						"variable": "CorpseMovementDirection",
+						"value": "-1"
 					}
 				}
 			],
-			"sid": 866770092652414
+			"sid": 149077384091253
+		},
+		{
+			"eventType": "block",
+			"conditions": [],
+			"actions": [],
+			"sid": 279646224146610
 		}
 	],
 	"sid": 409331247530026
