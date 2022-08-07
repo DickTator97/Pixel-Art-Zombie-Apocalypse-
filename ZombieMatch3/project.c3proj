@@ -110,7 +110,7 @@
 			"ground2d",
 			"Sprite5",
 			"CoreMechanic",
-			"MaxDistanceMonitor",
+			"MinDistanceMonitor",
 			"Array",
 			"Ground"
 		],
@@ -131,7 +131,6 @@
 	},
 	"eventSheets": {
 		"items": [
-			"Event sheet 1",
 			"TestLayout_EventSheet"
 		],
 		"subfolders": []

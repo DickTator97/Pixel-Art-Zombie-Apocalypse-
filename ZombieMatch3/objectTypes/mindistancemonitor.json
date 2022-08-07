@@ -1,5 +1,5 @@
 {
-	"name": "MaxDistanceMonitor",
+	"name": "MinDistanceMonitor",
 	"plugin-id": "Text",
 	"sid": 581870119425911,
 	"isGlobal": false,
