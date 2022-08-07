@@ -129,12 +129,12 @@
 				{
 					"id": "destroy",
 					"objectClass": "zombie1",
-					"sid": 954819116167703
+					"sid": 923078281689774
 				},
 				{
 					"id": "create-object",
 					"objectClass": "System",
-					"sid": 535208054806273,
+					"sid": 163590737778006,
 					"parameters": {
 						"object-to-create": "ZombieCorpse",
 						"layer": "0",
@@ -142,6 +142,15 @@
 						"y": "zombie1.Y+100",
 						"create-hierarchy": false,
 						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 190021984170120,
+					"parameters": {
+						"variable": "ZombiesHealth",
+						"value": "-1"
 					}
 				}
 			],
@@ -173,10 +182,10 @@
 				{
 					"id": "set-eventvar-value",
 					"objectClass": "System",
-					"sid": 342434426224402,
+					"sid": 875566874532651,
 					"parameters": {
 						"variable": "CorpseMovementDirection",
-						"value": "-(Player.X-ZombieCorpse.X)/abs(Player.X-ZombieCorpse.X)"
+						"value": "(ZombieCorpse.X-Player.X)/abs(ZombieCorpse.X-Player.X)"
 					}
 				},
 				{
@@ -186,6 +195,15 @@
 					"parameters": {
 						"x": "Player.X+200*CorpseMovementDirection",
 						"y": "Player.Y+20"
+					}
+				},
+				{
+					"id": "set-gravity",
+					"objectClass": "ZombieCorpse",
+					"sid": 916997674572281,
+					"behaviorType": "Platform",
+					"parameters": {
+						"gravity": "0"
 					}
 				}
 			],
@@ -208,6 +226,14 @@
 					"parameters": {
 						"variable": "CurrentDistance",
 						"value": "distance(Player.X,Player.Y, ZombieCorpse.X,ZombieCorpse.Y)"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "MaxDistanceMonitor",
+					"sid": 345528390110919,
+					"parameters": {
+						"text": "CurrentDistance"
 					}
 				}
 			],

@@ -9,6 +9,16 @@
 			"behaviorId": "solid",
 			"name": "Solid",
 			"sid": 774992186489744
+		},
+		{
+			"behaviorId": "Physics",
+			"name": "Physics",
+			"sid": 712563002250850
+		},
+		{
+			"behaviorId": "Platform",
+			"name": "Platform",
+			"sid": 804974533009139
 		}
 	],
 	"effectTypes": [],
