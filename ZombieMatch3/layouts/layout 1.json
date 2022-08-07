@@ -36,69 +36,6 @@
 					}
 				},
 				{
-					"type": "Player",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 4,
-					"instanceVariables": {},
-					"behaviors": {
-						"BoundToLayout": {
-							"properties": {
-								"bound-by": "edge"
-							}
-						},
-						"Physics": {
-							"properties": {
-								"immovable": false,
-								"collision-mask": "use-collision-polygon",
-								"prevent-rotation": false,
-								"density": 1,
-								"friction": 0.5,
-								"elasticity": 0.2,
-								"linear-damping": 0,
-								"angular-damping": 0.01,
-								"bullet": false,
-								"enabled": true
-							}
-						},
-						"Platform": {
-							"properties": {
-								"max-speed": 330,
-								"acceleration": 1500,
-								"deceleration": 1500,
-								"jump-strength": 650,
-								"gravity": 1500,
-								"max-fall-speed": 1000,
-								"double-jump": false,
-								"jump-sustain": 0,
-								"default-controls": true,
-								"enabled": true
-							}
-						}
-					},
-					"world": {
-						"x": 284,
-						"y": 834,
-						"width": 172.78992507943053,
-						"height": 183.76071397336264,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
 					"type": "zombie1",
 					"properties": {
 						"initially-visible": true,
@@ -119,7 +56,7 @@
 							"properties": {
 								"immovable": false,
 								"collision-mask": "use-collision-polygon",
-								"prevent-rotation": false,
+								"prevent-rotation": true,
 								"density": 1,
 								"friction": 0.5,
 								"elasticity": 0.2,
@@ -128,25 +65,11 @@
 								"bullet": false,
 								"enabled": true
 							}
-						},
-						"Platform": {
-							"properties": {
-								"max-speed": 330,
-								"acceleration": 1500,
-								"deceleration": 1500,
-								"jump-strength": 650,
-								"gravity": 1500,
-								"max-fall-speed": 1000,
-								"double-jump": false,
-								"jump-sustain": 0,
-								"default-controls": true,
-								"enabled": true
-							}
 						}
 					},
 					"world": {
 						"x": 864,
-						"y": 666,
+						"y": 645,
 						"width": -168,
 						"height": 209,
 						"originX": 0.5,
@@ -182,7 +105,7 @@
 							"properties": {
 								"immovable": false,
 								"collision-mask": "use-collision-polygon",
-								"prevent-rotation": false,
+								"prevent-rotation": true,
 								"density": 1,
 								"friction": 0.5,
 								"elasticity": 0.2,
@@ -191,25 +114,11 @@
 								"bullet": false,
 								"enabled": true
 							}
-						},
-						"Platform": {
-							"properties": {
-								"max-speed": 330,
-								"acceleration": 1500,
-								"deceleration": 1500,
-								"jump-strength": 650,
-								"gravity": 1500,
-								"max-fall-speed": 1000,
-								"double-jump": false,
-								"jump-sustain": 0,
-								"default-controls": true,
-								"enabled": true
-							}
 						}
 					},
 					"world": {
 						"x": 1609,
-						"y": 820,
+						"y": 799,
 						"width": -168,
 						"height": 209,
 						"originX": 0.5,
@@ -245,7 +154,7 @@
 							"properties": {
 								"immovable": false,
 								"collision-mask": "use-collision-polygon",
-								"prevent-rotation": false,
+								"prevent-rotation": true,
 								"density": 1,
 								"friction": 0.5,
 								"elasticity": 0.2,
@@ -254,27 +163,121 @@
 								"bullet": false,
 								"enabled": true
 							}
-						},
-						"Platform": {
+						}
+					},
+					"world": {
+						"x": 323,
+						"y": 339,
+						"width": 155,
+						"height": 209,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Ground",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 17,
+					"instanceVariables": {},
+					"behaviors": {
+						"Solid": {
 							"properties": {
-								"max-speed": 330,
-								"acceleration": 1500,
-								"deceleration": 1500,
-								"jump-strength": 650,
-								"gravity": 1500,
-								"max-fall-speed": 1000,
-								"double-jump": false,
-								"jump-sustain": 0,
-								"default-controls": true,
-								"enabled": true
+								"enabled": true,
+								"tags": ""
 							}
 						}
 					},
 					"world": {
-						"x": 322.5,
-						"y": 360,
-						"width": 155,
-						"height": 209,
+						"x": 957.5,
+						"y": 1003.5,
+						"width": 1923,
+						"height": 155,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Ground",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 18,
+					"instanceVariables": {},
+					"behaviors": {
+						"Solid": {
+							"properties": {
+								"enabled": true,
+								"tags": ""
+							}
+						}
+					},
+					"world": {
+						"x": 1109,
+						"y": 911,
+						"width": 747,
+						"height": 281,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Ground",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 20,
+					"instanceVariables": {},
+					"behaviors": {
+						"Solid": {
+							"properties": {
+								"enabled": true,
+								"tags": ""
+							}
+						}
+					},
+					"world": {
+						"x": 1178.5,
+						"y": 708.5,
+						"width": 302,
+						"height": 182,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -318,7 +321,18 @@
 		}
 	],
 	"sid": 180459174788156,
-	"nonworld-instances": [],
+	"nonworld-instances": [
+		{
+			"type": "Array",
+			"properties": {
+				"width": 10,
+				"height": 1,
+				"depth": 1
+			},
+			"uid": 16,
+			"instanceVariables": {}
+		}
+	],
 	"effectTypes": [],
 	"width": 1920,
 	"height": 1080,
@@ -326,5 +340,5 @@
 	"vpX": 0.5,
 	"vpY": 0.5,
 	"projection": "perspective",
-	"eventSheet": "Event sheet 1"
+	"eventSheet": "TestLayout_EventSheet"
 }

@@ -43,13 +43,13 @@
 		},
 		{
 			"eventType": "variable",
-			"name": "CurrentDistanceWithDirection",
+			"name": "PlayerPosition",
 			"type": "number",
 			"initialValue": "0",
 			"comment": "",
 			"isStatic": false,
 			"isConstant": false,
-			"sid": 187040326160139
+			"sid": 291845230003953
 		},
 		{
 			"eventType": "block",
@@ -212,6 +212,12 @@
 				}
 			],
 			"sid": 149077384091253
+		},
+		{
+			"eventType": "block",
+			"conditions": [],
+			"actions": [],
+			"sid": 487455440147141
 		}
 	],
 	"sid": 409331247530026

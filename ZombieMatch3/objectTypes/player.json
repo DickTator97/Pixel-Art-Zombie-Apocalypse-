@@ -6,11 +6,6 @@
 	"instanceVariables": [],
 	"behaviorTypes": [
 		{
-			"behaviorId": "bound",
-			"name": "BoundToLayout",
-			"sid": 920570649509842
-		},
-		{
 			"behaviorId": "Physics",
 			"name": "Physics",
 			"sid": 322341096291483

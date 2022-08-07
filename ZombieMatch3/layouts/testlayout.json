@@ -47,11 +47,6 @@
 					"uid": 11,
 					"instanceVariables": {},
 					"behaviors": {
-						"BoundToLayout": {
-							"properties": {
-								"bound-by": "edge"
-							}
-						},
 						"Physics": {
 							"properties": {
 								"immovable": false,
@@ -128,25 +123,11 @@
 								"bullet": false,
 								"enabled": true
 							}
-						},
-						"Platform": {
-							"properties": {
-								"max-speed": 330,
-								"acceleration": 1500,
-								"deceleration": 1500,
-								"jump-strength": 650,
-								"gravity": 1500,
-								"max-fall-speed": 1000,
-								"double-jump": false,
-								"jump-sustain": 0,
-								"default-controls": false,
-								"enabled": true
-							}
 						}
 					},
 					"world": {
-						"x": 1760,
-						"y": 864,
+						"x": 1536,
+						"y": 832,
 						"width": -168,
 						"height": 209,
 						"originX": 0.5,
@@ -388,8 +369,8 @@
 	"sid": 251340735387831,
 	"nonworld-instances": [],
 	"effectTypes": [],
-	"width": 3840,
-	"height": 2160,
+	"width": 1920,
+	"height": 1080,
 	"unboundedScrolling": false,
 	"vpX": 0.5,
 	"vpY": 0.5,
