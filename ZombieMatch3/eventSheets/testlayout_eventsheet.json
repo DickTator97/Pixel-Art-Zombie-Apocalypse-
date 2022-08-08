@@ -339,23 +339,6 @@
 					"sid": 829874562488605
 				}
 			]
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "is-between-angles",
-					"objectClass": "System",
-					"sid": 114747063382884,
-					"parameters": {
-						"angle": "0",
-						"first-angle": "0",
-						"second-angle": "45"
-					}
-				}
-			],
-			"actions": [],
-			"sid": 922311951623209
 		}
 	],
 	"sid": 409331247530026
