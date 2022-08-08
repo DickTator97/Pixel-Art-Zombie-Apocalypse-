@@ -320,7 +320,7 @@
 						}
 					},
 					"world": {
-						"x": 192,
+						"x": 288,
 						"y": 928,
 						"width": 224,
 						"height": 160,
@@ -339,7 +339,7 @@
 				{
 					"type": "MinDistanceMonitor",
 					"properties": {
-						"text": "Text",
+						"text": "closest distance from corpse",
 						"enable-bbcode": false,
 						"font": "Arial",
 						"size": 30,
@@ -366,7 +366,7 @@
 					"world": {
 						"x": 128,
 						"y": 64,
-						"width": 1024,
+						"width": 896,
 						"height": 64,
 						"originX": 0,
 						"originY": 0,
@@ -428,12 +428,54 @@
 						}
 					},
 					"world": {
-						"x": 1888,
-						"y": 960,
+						"x": 960,
+						"y": 896,
 						"width": 224,
 						"height": 160,
 						"originX": 0.5,
 						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Text",
+					"properties": {
+						"text": "Direction from closest zombie",
+						"enable-bbcode": true,
+						"font": "Arial",
+						"size": 30,
+						"line-height": -2,
+						"bold": true,
+						"italic": false,
+						"color": [
+							0,
+							0,
+							0,
+							1
+						],
+						"horizontal-alignment": "left",
+						"vertical-alignment": "top",
+						"wrapping": "word",
+						"initially-visible": true,
+						"origin": "top-left"
+					},
+					"uid": 26,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 128,
+						"y": 160,
+						"width": 672,
+						"height": 64,
+						"originX": 0,
+						"originY": 0,
 						"color": [
 							1,
 							1,

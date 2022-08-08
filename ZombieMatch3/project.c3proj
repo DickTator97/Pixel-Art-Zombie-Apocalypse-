@@ -112,7 +112,8 @@
 			"CoreMechanic",
 			"MinDistanceMonitor",
 			"Array",
-			"Ground"
+			"Ground",
+			"Text"
 		],
 		"subfolders": []
 	},

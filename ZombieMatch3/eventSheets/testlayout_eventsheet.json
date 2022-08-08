@@ -25,7 +25,7 @@
 			"eventType": "variable",
 			"name": "MaxDistance",
 			"type": "number",
-			"initialValue": "200",
+			"initialValue": "300",
 			"comment": "",
 			"isStatic": false,
 			"isConstant": false,
@@ -179,47 +179,14 @@
 				{
 					"id": "set-eventvar-value",
 					"objectClass": "System",
-					"sid": 713766092779147,
-					"parameters": {
-						"variable": "CorpseMovementDirection",
-						"value": "(ZombieCorpse.X-Player.X)/abs(ZombieCorpse.X-Player.X)"
-					}
-				},
-				{
-					"id": "set-text",
-					"objectClass": "MinDistanceMonitor",
-					"sid": 671673717907718,
-					"parameters": {
-						"text": "\"distance from closest zombie: \"& CurrentMinDistance"
-					}
-				}
-			],
-			"sid": 149077384091253
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-key-pressed",
-					"objectClass": "CoreMechanic",
-					"sid": 659100626636343,
-					"parameters": {
-						"key": 70
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "set-eventvar-value",
-					"objectClass": "System",
-					"sid": 288070534545499,
+					"sid": 326775570377313,
 					"parameters": {
 						"variable": "CurrentMinDistance",
-						"value": "distance(Player.X,Player.Y, ZombieCorpse.X,ZombieCorpse.Y)"
+						"value": "distance(Player.X,Player.Y,ZombieCorpse.X,ZombieCorpse.Y)"
 					}
 				}
 			],
-			"sid": 782679027414201,
+			"sid": 149077384091253,
 			"children": [
 				{
 					"eventType": "block",
@@ -227,7 +194,7 @@
 						{
 							"id": "for-each",
 							"objectClass": "System",
-							"sid": 577275500831655,
+							"sid": 260097988772451,
 							"parameters": {
 								"object": "ZombieCorpse"
 							}
@@ -237,14 +204,14 @@
 						{
 							"id": "set-eventvar-value",
 							"objectClass": "System",
-							"sid": 431723603359149,
+							"sid": 257712384414141,
 							"parameters": {
 								"variable": "TmpDistance",
 								"value": "distance(Player.X,Player.Y, ZombieCorpse.X,ZombieCorpse.Y)"
 							}
 						}
 					],
-					"sid": 717370315103374,
+					"sid": 957590842415972,
 					"children": [
 						{
 							"eventType": "block",
@@ -252,7 +219,7 @@
 								{
 									"id": "compare-two-values",
 									"objectClass": "System",
-									"sid": 913298672946540,
+									"sid": 826942524932925,
 									"parameters": {
 										"first-value": "TmpDistance",
 										"comparison": 3,
@@ -264,14 +231,39 @@
 								{
 									"id": "set-eventvar-value",
 									"objectClass": "System",
-									"sid": 483339066905173,
+									"sid": 781628958162565,
 									"parameters": {
 										"variable": "CurrentMinDistance",
 										"value": "TmpDistance"
 									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "MinDistanceMonitor",
+									"sid": 141792768777459,
+									"parameters": {
+										"text": "\"distance from closest zombie: \"& CurrentMinDistance"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 258335654628647,
+									"parameters": {
+										"variable": "CorpseMovementDirection",
+										"value": "(ZombieCorpse.X-Player.X)/abs(ZombieCorpse.X-Player.X)"
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "Text",
+									"sid": 327288801166116,
+									"parameters": {
+										"text": "\"Direction from closest zombie: \" &CorpseMovementDirection"
+									}
 								}
 							],
-							"sid": 968450210046007
+							"sid": 693079871026788
 						}
 					]
 				}
@@ -297,29 +289,73 @@
 						"comparison": 4,
 						"second-value": "CurrentMinDistance"
 					}
-				}
-			],
-			"actions": [
-				{
-					"id": "set-position",
-					"objectClass": "ZombieCorpse",
-					"sid": 324069383673071,
-					"parameters": {
-						"x": "Player.X+200*CorpseMovementDirection",
-						"y": "Player.Y+20"
-					}
 				},
 				{
-					"id": "set-gravity",
-					"objectClass": "ZombieCorpse",
-					"sid": 289944594985847,
-					"behaviorType": "Platform",
+					"id": "for-each",
+					"objectClass": "System",
+					"sid": 707775315429002,
 					"parameters": {
-						"gravity": "0"
+						"object": "ZombieCorpse"
 					}
 				}
 			],
-			"sid": 613611431802463
+			"actions": [],
+			"sid": 613611431802463,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 330262581299546,
+							"parameters": {
+								"variable": "CurrentMinDistance",
+								"comparison": 0,
+								"value": "distance(player.X,Player.Y,ZombieCorpse.X,ZombieCorpse.Y)"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-position",
+							"objectClass": "ZombieCorpse",
+							"sid": 737321767192489,
+							"parameters": {
+								"x": "Player.X+200*CorpseMovementDirection",
+								"y": "Player.Y+20"
+							}
+						},
+						{
+							"id": "set-gravity",
+							"objectClass": "ZombieCorpse",
+							"sid": 275015484110492,
+							"behaviorType": "Platform",
+							"parameters": {
+								"gravity": "0"
+							}
+						}
+					],
+					"sid": 829874562488605
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-between-angles",
+					"objectClass": "System",
+					"sid": 114747063382884,
+					"parameters": {
+						"angle": "0",
+						"first-angle": "0",
+						"second-angle": "45"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 922311951623209
 		}
 	],
 	"sid": 409331247530026
