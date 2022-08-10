@@ -150,17 +150,57 @@
 			"eventType": "block",
 			"conditions": [
 				{
-					"id": "on-collision-with-another-object",
-					"objectClass": "Player",
-					"sid": 798317698011180,
-					"parameters": {
-						"object": "ZombieCorpse"
-					}
-				},
-				{
-					"id": "key-is-down",
+					"id": "on-key-pressed",
 					"objectClass": "CoreMechanic",
-					"sid": 597276525022479,
+					"sid": 631259955594936,
+					"parameters": {
+						"key": 70
+					}
+				}
+			],
+			"actions": [],
+			"sid": 540867022115365,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "Player",
+							"sid": 338992630706403,
+							"parameters": {
+								"object": "ZombieCorpse"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "pin-to-object-properties",
+							"objectClass": "ZombieCorpse",
+							"sid": 375195430785585,
+							"behaviorType": "Pin",
+							"parameters": {
+								"pin-to": "Player",
+								"x": true,
+								"y": true,
+								"angle": true,
+								"width-type": "no",
+								"height-type": "no",
+								"z": false
+							}
+						}
+					],
+					"sid": 676262872114123
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-released",
+					"objectClass": "CoreMechanic",
+					"sid": 779579046439083,
 					"parameters": {
 						"key": 70
 					}
@@ -168,15 +208,13 @@
 			],
 			"actions": [
 				{
-					"id": "move-forward",
+					"id": "unpin",
 					"objectClass": "ZombieCorpse",
-					"sid": 636730144036369,
-					"parameters": {
-						"distance": "15"
-					}
+					"sid": 124194031862350,
+					"behaviorType": "Pin"
 				}
 			],
-			"sid": 866770092652414
+			"sid": 675215785510646
 		}
 	],
 	"sid": 409331247530026
