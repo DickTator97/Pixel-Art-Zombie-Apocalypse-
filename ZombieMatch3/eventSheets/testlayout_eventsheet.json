@@ -142,6 +142,15 @@
 						"create-hierarchy": false,
 						"template-name": "\"\""
 					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 877794990414149,
+					"parameters": {
+						"variable": "ZombiesHealth",
+						"value": "-1"
+					}
 				}
 			],
 			"sid": 312789065453352
