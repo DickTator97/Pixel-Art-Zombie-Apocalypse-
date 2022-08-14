@@ -26,6 +26,11 @@
 			"behaviorId": "Platform",
 			"name": "Platform",
 			"sid": 386641053148513
+		},
+		{
+			"behaviorId": "Pathfinding",
+			"name": "Pathfinding",
+			"sid": 123730866302696
 		}
 	],
 	"effectTypes": [],

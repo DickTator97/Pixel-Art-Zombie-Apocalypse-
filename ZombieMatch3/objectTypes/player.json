@@ -3,7 +3,14 @@
 	"plugin-id": "Sprite",
 	"sid": 992902147625369,
 	"isGlobal": false,
-	"instanceVariables": [],
+	"instanceVariables": [
+		{
+			"name": "PlayerHealth",
+			"type": "number",
+			"desc": "",
+			"sid": 935609408613381
+		}
+	],
 	"behaviorTypes": [
 		{
 			"behaviorId": "bound",

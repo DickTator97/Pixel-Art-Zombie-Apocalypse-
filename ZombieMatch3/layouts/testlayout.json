@@ -45,7 +45,9 @@
 						"live-preview": false
 					},
 					"uid": 11,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"PlayerHealth": 3
+					},
 					"behaviors": {
 						"BoundToLayout": {
 							"properties": {
@@ -68,9 +70,9 @@
 						},
 						"Platform": {
 							"properties": {
-								"max-speed": 330,
+								"max-speed": 400,
 								"acceleration": 1500,
-								"deceleration": 1500,
+								"deceleration": 1000,
 								"jump-strength": 650,
 								"gravity": 1500,
 								"max-fall-speed": 1000,
@@ -142,6 +144,20 @@
 								"double-jump": false,
 								"jump-sustain": 0,
 								"default-controls": false,
+								"enabled": true
+							}
+						},
+						"Pathfinding": {
+							"properties": {
+								"cell-size": 30,
+								"cell-border": -1,
+								"obstacles": "solids",
+								"max-speed": 200,
+								"acceleration": 1000,
+								"deceleration": 2000,
+								"rotate-speed": 135,
+								"rotate-object": true,
+								"diagonals": true,
 								"enabled": true
 							}
 						}
@@ -417,6 +433,20 @@
 								"default-controls": false,
 								"enabled": true
 							}
+						},
+						"Pathfinding": {
+							"properties": {
+								"cell-size": 30,
+								"cell-border": -1,
+								"obstacles": "solids",
+								"max-speed": 200,
+								"acceleration": 1000,
+								"deceleration": 2000,
+								"rotate-speed": 135,
+								"rotate-object": true,
+								"diagonals": true,
+								"enabled": true
+							}
 						}
 					},
 					"world": {
@@ -482,6 +512,20 @@
 								"default-controls": false,
 								"enabled": true
 							}
+						},
+						"Pathfinding": {
+							"properties": {
+								"cell-size": 30,
+								"cell-border": -1,
+								"obstacles": "solids",
+								"max-speed": 200,
+								"acceleration": 1000,
+								"deceleration": 2000,
+								"rotate-speed": 135,
+								"rotate-object": true,
+								"diagonals": true,
+								"enabled": true
+							}
 						}
 					},
 					"world": {
@@ -491,6 +535,50 @@
 						"height": 209,
 						"originX": 0.5,
 						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Text",
+					"properties": {
+						"text": "",
+						"enable-bbcode": true,
+						"font": "Arial",
+						"size": 50,
+						"line-height": 0,
+						"bold": true,
+						"italic": false,
+						"color": [
+							1,
+							0,
+							0,
+							1
+						],
+						"horizontal-alignment": "left",
+						"vertical-alignment": "top",
+						"wrapping": "word",
+						"initially-visible": true,
+						"origin": "top-left"
+					},
+					"uid": 18,
+					"instanceVariables": {
+						"PlayersHealthMonitor": 3
+					},
+					"behaviors": {},
+					"world": {
+						"x": 96,
+						"y": 96,
+						"width": 384,
+						"height": 96,
+						"originX": 0,
+						"originY": 0,
 						"color": [
 							1,
 							1,

@@ -96,6 +96,16 @@
 					"parameters": {
 						"color": "rgbEx(25, 2, 109)"
 					}
+				},
+				{
+					"id": "find-path",
+					"objectClass": "zombie1",
+					"sid": 160389546537864,
+					"behaviorType": "Pathfinding",
+					"parameters": {
+						"x": "Player.X",
+						"y": "Player.Y"
+					}
 				}
 			],
 			"sid": 445197738759976
@@ -205,6 +215,109 @@
 				}
 			],
 			"sid": 675215785510646
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-path-found",
+					"objectClass": "zombie1",
+					"sid": 973973121962634,
+					"behaviorType": "Pathfinding"
+				}
+			],
+			"actions": [
+				{
+					"id": "move-along-path",
+					"objectClass": "zombie1",
+					"sid": 169429891476845,
+					"behaviorType": "Pathfinding"
+				}
+			],
+			"sid": 574671294942970
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "zombie1",
+					"sid": 113719570083062,
+					"parameters": {
+						"object": "Player"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "subtract-from-instvar",
+					"objectClass": "Player",
+					"sid": 342523357321837,
+					"parameters": {
+						"instance-variable": "PlayerHealth",
+						"value": "1"
+					}
+				},
+				{
+					"id": "set-vector-x",
+					"objectClass": "Player",
+					"sid": 343247550513987,
+					"behaviorType": "Platform",
+					"parameters": {
+						"vector-x": "-1000"
+					}
+				},
+				{
+					"id": "set-vector-y",
+					"objectClass": "Player",
+					"sid": 165430302103660,
+					"behaviorType": "Platform",
+					"parameters": {
+						"vector-y": "-500"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "Text",
+					"sid": 720694145160492,
+					"parameters": {
+						"text": "\"Health:\" & Player.PlayerHealth"
+					}
+				}
+			],
+			"sid": 865747233035085
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "Player",
+					"sid": 589209372723815,
+					"parameters": {
+						"instance-variable": "PlayerHealth",
+						"comparison": 3,
+						"value": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "Player",
+					"sid": 990517608850440
+				}
+			],
+			"sid": 635825682847170
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "EnemyEvents",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [],
+			"sid": 189143142789601
 		}
 	],
 	"sid": 409331247530026
