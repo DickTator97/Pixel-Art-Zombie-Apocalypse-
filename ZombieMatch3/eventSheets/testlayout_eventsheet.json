@@ -3,16 +3,6 @@
 	"events": [
 		{
 			"eventType": "variable",
-			"name": "ZombiesHealth",
-			"type": "number",
-			"initialValue": "3",
-			"comment": "",
-			"isStatic": false,
-			"isConstant": false,
-			"sid": 612076365706383
-		},
-		{
-			"eventType": "variable",
 			"name": "CorpseMovementDirection",
 			"type": "number",
 			"initialValue": "1",
@@ -91,11 +81,11 @@
 					"sid": 703046233256122
 				},
 				{
-					"id": "add-to-eventvar",
-					"objectClass": "System",
-					"sid": 982279824125375,
+					"id": "add-to-instvar",
+					"objectClass": "zombie1",
+					"sid": 415500497578950,
 					"parameters": {
-						"variable": "ZombiesHealth",
+						"instance-variable": "Health",
 						"value": "-1"
 					}
 				},
@@ -114,13 +104,13 @@
 			"eventType": "block",
 			"conditions": [
 				{
-					"id": "compare-two-values",
-					"objectClass": "System",
-					"sid": 400210424777903,
+					"id": "compare-instance-variable",
+					"objectClass": "zombie1",
+					"sid": 481674487404086,
 					"parameters": {
-						"first-value": "ZombiesHealth",
+						"instance-variable": "Health",
 						"comparison": 0,
-						"second-value": "0"
+						"value": "0"
 					}
 				}
 			],
@@ -141,15 +131,6 @@
 						"y": "zombie1.Y+100",
 						"create-hierarchy": false,
 						"template-name": "\"\""
-					}
-				},
-				{
-					"id": "set-eventvar-value",
-					"objectClass": "System",
-					"sid": 877794990414149,
-					"parameters": {
-						"variable": "ZombiesHealth",
-						"value": "-1"
 					}
 				}
 			],
