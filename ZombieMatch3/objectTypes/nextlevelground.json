@@ -1,52 +1,41 @@
 {
-	"name": "ZombieCorpse",
+	"name": "NextLevelGround",
 	"plugin-id": "Sprite",
-	"sid": 630116746929236,
+	"sid": 729515145996644,
 	"isGlobal": false,
 	"instanceVariables": [],
-	"behaviorTypes": [
-		{
-			"behaviorId": "Platform",
-			"name": "Platform",
-			"sid": 504682385346354
-		},
-		{
-			"behaviorId": "Pin",
-			"name": "Pin",
-			"sid": 620245194741816
-		}
-	],
+	"behaviorTypes": [],
 	"effectTypes": [],
 	"animations": {
 		"items": [
 			{
 				"frames": [
 					{
-						"width": 210,
-						"height": 168,
+						"width": 400,
+						"height": 600,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
-						"imageSpriteId": 6123844,
+						"imageSpriteId": 3335398,
 						"collisionPoly": {
 							"points": [
+								0.24500000000000058,
 								0,
-								0.8028334014529285,
-								0,
-								0.2748016440679157,
-								0.9976191929408482,
-								0.28571424030122283,
 								1,
-								0.8147381179446274
+								0,
+								1,
+								1,
+								0.2350001525878911,
+								1
 							]
 						},
 						"useCollisionPoly": true,
 						"duration": 1
 					}
 				],
-				"sid": 794144626312287,
+				"sid": 124654657356427,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,

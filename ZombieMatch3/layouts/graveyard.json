@@ -435,20 +435,6 @@
 					"uid": 19,
 					"instanceVariables": {},
 					"behaviors": {
-						"Physics": {
-							"properties": {
-								"immovable": false,
-								"collision-mask": "use-collision-polygon",
-								"prevent-rotation": true,
-								"density": 1,
-								"friction": 0.5,
-								"elasticity": 0.2,
-								"linear-damping": 0,
-								"angular-damping": 0.01,
-								"bullet": false,
-								"enabled": true
-							}
-						},
 						"Platform": {
 							"properties": {
 								"max-speed": 330,

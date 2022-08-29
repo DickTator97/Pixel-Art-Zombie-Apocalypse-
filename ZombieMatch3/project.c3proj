@@ -122,7 +122,9 @@
 			"Text",
 			"Sprite6",
 			"sprites",
-			"Ground"
+			"Ground",
+			"TallGround",
+			"NextLevelGround"
 		],
 		"subfolders": []
 	},
