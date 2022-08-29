@@ -156,7 +156,7 @@
 								"acceleration": 1000,
 								"deceleration": 2000,
 								"rotate-speed": 135,
-								"rotate-object": true,
+								"rotate-object": false,
 								"diagonals": true,
 								"enabled": true
 							}
@@ -296,69 +296,6 @@
 					}
 				},
 				{
-					"type": "ZombieCorpse",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 24,
-					"instanceVariables": {},
-					"behaviors": {
-						"Physics": {
-							"properties": {
-								"immovable": false,
-								"collision-mask": "use-collision-polygon",
-								"prevent-rotation": true,
-								"density": 1,
-								"friction": 0.5,
-								"elasticity": 0.2,
-								"linear-damping": 0,
-								"angular-damping": 0.01,
-								"bullet": false,
-								"enabled": true
-							}
-						},
-						"Platform": {
-							"properties": {
-								"max-speed": 330,
-								"acceleration": 1500,
-								"deceleration": 1500,
-								"jump-strength": 650,
-								"gravity": 1500,
-								"max-fall-speed": 1000,
-								"double-jump": false,
-								"jump-sustain": 0,
-								"default-controls": false,
-								"enabled": true
-							}
-						},
-						"Pin": {
-							"properties": {
-								"destroy": false
-							}
-						}
-					},
-					"world": {
-						"x": 768,
-						"y": 928,
-						"width": 224,
-						"height": 160,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
 					"type": "BloodSprite",
 					"properties": {
 						"initially-visible": true,
@@ -443,7 +380,7 @@
 								"acceleration": 1000,
 								"deceleration": 2000,
 								"rotate-speed": 135,
-								"rotate-object": true,
+								"rotate-object": false,
 								"diagonals": true,
 								"enabled": true
 							}
@@ -491,7 +428,7 @@
 								"collision-mask": "use-collision-polygon",
 								"prevent-rotation": true,
 								"density": 1,
-								"friction": 0.5,
+								"friction": 0,
 								"elasticity": 0.2,
 								"linear-damping": 0,
 								"angular-damping": 0.01,
@@ -522,7 +459,7 @@
 								"acceleration": 1000,
 								"deceleration": 2000,
 								"rotate-speed": 135,
-								"rotate-object": true,
+								"rotate-object": false,
 								"diagonals": true,
 								"enabled": true
 							}
@@ -579,6 +516,69 @@
 						"height": 96,
 						"originX": 0,
 						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "ZombieCorpse",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 19,
+					"instanceVariables": {},
+					"behaviors": {
+						"Physics": {
+							"properties": {
+								"immovable": false,
+								"collision-mask": "use-collision-polygon",
+								"prevent-rotation": true,
+								"density": 1,
+								"friction": 0.5,
+								"elasticity": 0.2,
+								"linear-damping": 0,
+								"angular-damping": 0.01,
+								"bullet": false,
+								"enabled": true
+							}
+						},
+						"Platform": {
+							"properties": {
+								"max-speed": 330,
+								"acceleration": 1500,
+								"deceleration": 1500,
+								"jump-strength": 650,
+								"gravity": 1500,
+								"max-fall-speed": 1000,
+								"double-jump": false,
+								"jump-sustain": 0,
+								"default-controls": false,
+								"enabled": true
+							}
+						},
+						"Pin": {
+							"properties": {
+								"destroy": false
+							}
+						}
+					},
+					"world": {
+						"x": 672,
+						"y": 928,
+						"width": 224,
+						"height": 160,
+						"originX": 0.5,
+						"originY": 0.5,
 						"color": [
 							1,
 							1,
