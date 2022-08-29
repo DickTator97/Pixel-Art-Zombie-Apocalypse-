@@ -1,0 +1,57 @@
+{
+	"name": "Ground",
+	"plugin-id": "Sprite",
+	"sid": 853092393583087,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "solid",
+			"name": "Solid",
+			"sid": 609953878763828
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 400,
+						"height": 400,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 4749316,
+						"collisionPoly": {
+							"points": [
+								0.028104565190333948,
+								0.7743464899998088,
+								0.5,
+								0.7745098039215691,
+								0.9696076935412841,
+								0.7745098787195541,
+								0.9699346056171494,
+								1,
+								0.02924845078412225,
+								1
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 547302633408831,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

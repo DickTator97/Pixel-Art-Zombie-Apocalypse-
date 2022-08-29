@@ -119,7 +119,10 @@
 			"Sprite5",
 			"CoreMechanic",
 			"BloodSprite",
-			"Text"
+			"Text",
+			"Sprite6",
+			"sprites",
+			"Ground"
 		],
 		"subfolders": []
 	},
@@ -132,7 +135,8 @@
 	"layouts": {
 		"items": [
 			"Layout 1",
-			"TestLayout"
+			"GraveYard",
+			"Layout 2"
 		],
 		"subfolders": []
 	},
