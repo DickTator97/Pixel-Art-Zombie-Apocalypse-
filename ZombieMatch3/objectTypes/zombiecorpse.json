@@ -14,6 +14,11 @@
 			"behaviorId": "Pin",
 			"name": "Pin",
 			"sid": 620245194741816
+		},
+		{
+			"behaviorId": "solid",
+			"name": "Solid",
+			"sid": 706206918250292
 		}
 	],
 	"effectTypes": [],
@@ -27,7 +32,7 @@
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
-						"exportFormat": "png",
+						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"imageSpriteId": 6123844,
 						"collisionPoly": {

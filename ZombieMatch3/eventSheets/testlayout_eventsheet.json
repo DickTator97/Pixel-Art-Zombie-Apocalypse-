@@ -142,6 +142,15 @@
 						"create-hierarchy": false,
 						"template-name": "\"\""
 					}
+				},
+				{
+					"id": "set-enabled",
+					"objectClass": "ZombieCorpse",
+					"sid": 745787475856618,
+					"behaviorType": "Solid",
+					"parameters": {
+						"state": "disabled"
+					}
 				}
 			],
 			"sid": 312789065453352
@@ -188,6 +197,23 @@
 								"height-type": "no",
 								"z": false
 							}
+						},
+						{
+							"id": "set-gravity",
+							"objectClass": "ZombieCorpse",
+							"sid": 360436220510455,
+							"behaviorType": "Platform",
+							"parameters": {
+								"gravity": "1000"
+							}
+						},
+						{
+							"id": "set-angle",
+							"objectClass": "ZombieCorpse",
+							"sid": 117579153717658,
+							"parameters": {
+								"angle": "0"
+							}
 						}
 					],
 					"sid": 676262872114123
@@ -214,7 +240,80 @@
 					"behaviorType": "Pin"
 				}
 			],
-			"sid": 675215785510646
+			"sid": 675215785510646,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "pick-nearestfurthest",
+							"objectClass": "PlaceHolderZombieBody",
+							"sid": 358496542707488,
+							"parameters": {
+								"which": "nearest",
+								"x": "Player.X",
+								"y": "PlaceHolderZombieBody.Y"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 698455915194842,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-x",
+									"objectClass": "ZombieCorpse",
+									"sid": 796431150924253,
+									"parameters": {
+										"comparison": 5,
+										"x-co-ordinate": "PlaceHolderZombieBody.X-200"
+									}
+								},
+								{
+									"id": "compare-x",
+									"objectClass": "ZombieCorpse",
+									"sid": 427132945014826,
+									"parameters": {
+										"comparison": 3,
+										"x-co-ordinate": "PlaceHolderZombieBody.X+200"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-position",
+									"objectClass": "ZombieCorpse",
+									"sid": 213841766104412,
+									"parameters": {
+										"x": "PlaceHolderZombieBody.X",
+										"y": "PlaceHolderZombieBody.Y"
+									}
+								},
+								{
+									"id": "set-angle",
+									"objectClass": "ZombieCorpse",
+									"sid": 312954623468548,
+									"parameters": {
+										"angle": "PlaceHolderZombieBody.Angle"
+									}
+								},
+								{
+									"id": "set-gravity",
+									"objectClass": "ZombieCorpse",
+									"sid": 721195170995759,
+									"behaviorType": "Platform",
+									"parameters": {
+										"gravity": "0"
+									}
+								}
+							],
+							"sid": 497582866875105
+						}
+					]
+				}
+			]
 		},
 		{
 			"eventType": "block",
@@ -278,7 +377,7 @@
 				},
 				{
 					"id": "set-text",
-					"objectClass": "Text",
+					"objectClass": "HealthMonitor",
 					"sid": 720694145160492,
 					"parameters": {
 						"text": "\"Health:\" & Player.PlayerHealth"

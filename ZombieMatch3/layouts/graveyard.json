@@ -80,7 +80,7 @@
 					}
 				},
 				{
-					"type": "Text",
+					"type": "HealthMonitor",
 					"properties": {
 						"text": "",
 						"enable-bbcode": true,
@@ -452,6 +452,12 @@
 						"Pin": {
 							"properties": {
 								"destroy": false
+							}
+						},
+						"Solid": {
+							"properties": {
+								"enabled": true,
+								"tags": ""
 							}
 						}
 					},
