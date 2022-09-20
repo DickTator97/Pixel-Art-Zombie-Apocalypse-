@@ -3,13 +3,13 @@
 	"events": [
 		{
 			"eventType": "variable",
-			"name": "CorpseMovementDirection",
-			"type": "number",
-			"initialValue": "1",
+			"name": "IsDragging",
+			"type": "boolean",
+			"initialValue": "false",
 			"comment": "",
 			"isStatic": false,
 			"isConstant": false,
-			"sid": 811115987868147
+			"sid": 986502620347009
 		},
 		{
 			"eventType": "block",
@@ -186,7 +186,7 @@
 						{
 							"id": "pin-to-object-properties",
 							"objectClass": "ZombieCorpse",
-							"sid": 375195430785585,
+							"sid": 932486544764231,
 							"behaviorType": "Pin",
 							"parameters": {
 								"pin-to": "Player",
@@ -248,11 +248,19 @@
 						{
 							"id": "pick-nearestfurthest",
 							"objectClass": "PlaceHolderZombieBody",
-							"sid": 358496542707488,
+							"sid": 693409043829667,
 							"parameters": {
 								"which": "nearest",
 								"x": "Player.X",
-								"y": "PlaceHolderZombieBody.Y"
+								"y": "Player.Y"
+							}
+						},
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "PlaceHolderZombieBody",
+							"sid": 658794390778646,
+							"parameters": {
+								"instance-variable": "IsAvailable"
 							}
 						}
 					],
@@ -265,23 +273,50 @@
 								{
 									"id": "compare-x",
 									"objectClass": "ZombieCorpse",
-									"sid": 796431150924253,
+									"sid": 412034157786871,
 									"parameters": {
 										"comparison": 5,
-										"x-co-ordinate": "PlaceHolderZombieBody.X-200"
+										"x-co-ordinate": "PlaceHolderZombieBody.X-100"
 									}
 								},
 								{
 									"id": "compare-x",
 									"objectClass": "ZombieCorpse",
-									"sid": 427132945014826,
+									"sid": 758386182592146,
 									"parameters": {
 										"comparison": 3,
-										"x-co-ordinate": "PlaceHolderZombieBody.X+200"
+										"x-co-ordinate": "PlaceHolderZombieBody.X+100"
 									}
+								},
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "PlaceHolderZombieBody",
+									"sid": 294119583886674,
+									"parameters": {
+										"object": "Player"
+									},
+									"isInverted": true
 								}
 							],
 							"actions": [
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "PlaceHolderZombieBody",
+									"sid": 961908769647791,
+									"parameters": {
+										"instance-variable": "IsAvailable",
+										"value": "false"
+									}
+								},
+								{
+									"id": "set-gravity",
+									"objectClass": "ZombieCorpse",
+									"sid": 442560062467688,
+									"behaviorType": "Platform",
+									"parameters": {
+										"gravity": "0"
+									}
+								},
 								{
 									"id": "set-position",
 									"objectClass": "ZombieCorpse",
@@ -300,18 +335,9 @@
 									}
 								},
 								{
-									"id": "set-gravity",
-									"objectClass": "ZombieCorpse",
-									"sid": 721195170995759,
-									"behaviorType": "Platform",
-									"parameters": {
-										"gravity": "0"
-									}
-								},
-								{
 									"id": "set-enabled",
 									"objectClass": "ZombieCorpse",
-									"sid": 177888339619141,
+									"sid": 566737004450788,
 									"behaviorType": "Solid",
 									"parameters": {
 										"state": "enabled"
