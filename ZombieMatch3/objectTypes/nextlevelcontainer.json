@@ -1,16 +1,9 @@
 {
-	"name": "PlaceHolderZombieBody",
+	"name": "NextLevelContainer",
 	"plugin-id": "Sprite",
-	"sid": 295438529798628,
+	"sid": 932012193373386,
 	"isGlobal": false,
-	"instanceVariables": [
-		{
-			"name": "IsAvailable",
-			"type": "boolean",
-			"desc": "",
-			"sid": 953783903811392
-		}
-	],
+	"instanceVariables": [],
 	"behaviorTypes": [],
 	"effectTypes": [],
 	"animations": {
@@ -25,12 +18,12 @@
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
-						"imageSpriteId": 341303,
+						"imageSpriteId": 1344785,
 						"useCollisionPoly": true,
 						"duration": 1
 					}
 				],
-				"sid": 373831147590275,
+				"sid": 705502869176129,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,

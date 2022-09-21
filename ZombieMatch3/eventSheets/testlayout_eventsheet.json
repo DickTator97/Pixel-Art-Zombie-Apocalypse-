@@ -22,6 +22,24 @@
 						"mouse-button": "left",
 						"click-type": "clicked"
 					}
+				},
+				{
+					"id": "cursor-is-over-object",
+					"objectClass": "Mouse",
+					"sid": 513620972710433,
+					"parameters": {
+						"object": "RestartImage"
+					},
+					"isInverted": true
+				},
+				{
+					"id": "cursor-is-over-object",
+					"objectClass": "Mouse",
+					"sid": 524163970322857,
+					"parameters": {
+						"object": "NextLevelContainer"
+					},
+					"isInverted": true
 				}
 			],
 			"actions": [
@@ -40,6 +58,69 @@
 				}
 			],
 			"sid": 453845881652511
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-click",
+					"objectClass": "Mouse",
+					"sid": 178368874895048,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked"
+					}
+				},
+				{
+					"id": "cursor-is-over-object",
+					"objectClass": "Mouse",
+					"sid": 892379166150632,
+					"parameters": {
+						"object": "RestartImage"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "restart-layout",
+					"objectClass": "System",
+					"sid": 809212232737217
+				}
+			],
+			"sid": 715650857201394
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-click",
+					"objectClass": "Mouse",
+					"sid": 647359390171571,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked"
+					}
+				},
+				{
+					"id": "cursor-is-over-object",
+					"objectClass": "Mouse",
+					"sid": 837893345119436,
+					"parameters": {
+						"object": "NextLevelContainer"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-nextprevious-layout",
+					"objectClass": "System",
+					"sid": 334603689736188,
+					"parameters": {
+						"which": "next"
+					}
+				}
+			],
+			"sid": 328768632564299
 		},
 		{
 			"eventType": "block",
@@ -174,12 +255,31 @@
 					"eventType": "block",
 					"conditions": [
 						{
+							"id": "pick-nearestfurthest",
+							"objectClass": "ZombieCorpse",
+							"sid": 590665533159259,
+							"parameters": {
+								"which": "nearest",
+								"x": "Player.X",
+								"y": "Player.Y"
+							}
+						},
+						{
 							"id": "is-overlapping-another-object",
 							"objectClass": "Player",
 							"sid": 338992630706403,
 							"parameters": {
 								"object": "ZombieCorpse"
 							}
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 117761591638642,
+							"parameters": {
+								"variable": "IsDragging"
+							},
+							"isInverted": true
 						}
 					],
 					"actions": [
@@ -214,6 +314,15 @@
 							"parameters": {
 								"angle": "0"
 							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 669585932729483,
+							"parameters": {
+								"variable": "IsDragging",
+								"value": "true"
+							}
 						}
 					],
 					"sid": 676262872114123
@@ -238,6 +347,15 @@
 					"objectClass": "ZombieCorpse",
 					"sid": 124194031862350,
 					"behaviorType": "Pin"
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 395123836766760,
+					"parameters": {
+						"variable": "IsDragging",
+						"value": "false"
+					}
 				}
 			],
 			"sid": 675215785510646,
@@ -296,6 +414,16 @@
 										"object": "Player"
 									},
 									"isInverted": true
+								},
+								{
+									"id": "pick-nearestfurthest",
+									"objectClass": "ZombieCorpse",
+									"sid": 254066818376716,
+									"parameters": {
+										"which": "nearest",
+										"x": "Player.X",
+										"y": "Player.Y"
+									}
 								}
 							],
 							"actions": [
