@@ -18,6 +18,7 @@
 					"id": "on-click",
 					"objectClass": "Mouse",
 					"sid": 319358502343420,
+					"disabled": true,
 					"parameters": {
 						"mouse-button": "left",
 						"click-type": "clicked"
@@ -47,6 +48,7 @@
 					"id": "create-object",
 					"objectClass": "System",
 					"sid": 281992600601139,
+					"disabled": true,
 					"parameters": {
 						"object-to-create": "Sprite3",
 						"layer": "0",
@@ -580,6 +582,138 @@
 			"isActiveOnStart": true,
 			"children": [],
 			"sid": 189143142789601
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Movement Check",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "CoreMechanic",
+							"sid": 901543149166627,
+							"parameters": {
+								"key": 39
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-mirrored",
+							"objectClass": "Player",
+							"sid": 622091210661988,
+							"parameters": {
+								"state": "not-mirrored"
+							}
+						}
+					],
+					"sid": 497769210516553
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "CoreMechanic",
+							"sid": 103361526792482,
+							"parameters": {
+								"key": 37
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-mirrored",
+							"objectClass": "Player",
+							"sid": 891887862427297,
+							"parameters": {
+								"state": "mirrored"
+							}
+						}
+					],
+					"sid": 982482788076333
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-click",
+							"objectClass": "Mouse",
+							"sid": 361624254008215,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "spawn-another-object",
+							"objectClass": "Player",
+							"sid": 609733786611866,
+							"parameters": {
+								"object": "Sprite3",
+								"layer": "0",
+								"image-point": "1",
+								"create-hierarchy": false
+							}
+						}
+					],
+					"sid": 430936790591404,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-mirrored",
+									"objectClass": "Player",
+									"sid": 367779716849106
+								}
+							],
+							"actions": [
+								{
+									"id": "set-speed",
+									"objectClass": "Sprite3",
+									"sid": 750366453728194,
+									"behaviorType": "Bullet",
+									"parameters": {
+										"speed": "- 800"
+									}
+								}
+							],
+							"sid": 139587989951108
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 719594194566033
+								}
+							],
+							"actions": [
+								{
+									"id": "set-speed",
+									"objectClass": "Sprite3",
+									"sid": 484619721007960,
+									"behaviorType": "Bullet",
+									"parameters": {
+										"speed": "800"
+									}
+								}
+							],
+							"sid": 461757384451607
+						}
+					]
+				}
+			],
+			"sid": 505744088281447
 		}
 	],
 	"sid": 409331247530026

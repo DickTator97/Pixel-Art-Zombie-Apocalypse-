@@ -63,6 +63,13 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Shot From Here",
+								"x": 0.6825396825396826,
+								"y": 0.6716417910447762
+							}
+						],
 						"duration": 1
 					},
 					{
