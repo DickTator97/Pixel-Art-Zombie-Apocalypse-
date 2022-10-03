@@ -191,7 +191,30 @@
 					}
 				}
 			],
-			"sid": 445197738759976
+			"sid": 445197738759976,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-mirrored",
+							"objectClass": "Player",
+							"sid": 357660794123833
+						}
+					],
+					"actions": [
+						{
+							"id": "set-mirrored",
+							"objectClass": "zombie1",
+							"sid": 206175795493603,
+							"parameters": {
+								"state": "not-mirrored"
+							}
+						}
+					],
+					"sid": 163659711217246
+				}
+			]
 		},
 		{
 			"eventType": "block",
@@ -382,6 +405,16 @@
 							"parameters": {
 								"instance-variable": "IsAvailable"
 							}
+						},
+						{
+							"id": "pick-nearestfurthest",
+							"objectClass": "ZombieCorpse",
+							"sid": 356852201546522,
+							"parameters": {
+								"which": "nearest",
+								"x": "Player.X",
+								"y": "Player.Y"
+							}
 						}
 					],
 					"actions": [],
@@ -416,65 +449,64 @@
 										"object": "Player"
 									},
 									"isInverted": true
-								},
-								{
-									"id": "pick-nearestfurthest",
-									"objectClass": "ZombieCorpse",
-									"sid": 254066818376716,
-									"parameters": {
-										"which": "nearest",
-										"x": "Player.X",
-										"y": "Player.Y"
-									}
 								}
 							],
 							"actions": [
 								{
 									"id": "set-boolean-instvar",
 									"objectClass": "PlaceHolderZombieBody",
-									"sid": 961908769647791,
+									"sid": 626479564041031,
 									"parameters": {
 										"instance-variable": "IsAvailable",
 										"value": "false"
 									}
-								},
-								{
-									"id": "set-gravity",
-									"objectClass": "ZombieCorpse",
-									"sid": 442560062467688,
-									"behaviorType": "Platform",
-									"parameters": {
-										"gravity": "0"
-									}
-								},
-								{
-									"id": "set-position",
-									"objectClass": "ZombieCorpse",
-									"sid": 213841766104412,
-									"parameters": {
-										"x": "PlaceHolderZombieBody.X",
-										"y": "PlaceHolderZombieBody.Y"
-									}
-								},
-								{
-									"id": "set-angle",
-									"objectClass": "ZombieCorpse",
-									"sid": 312954623468548,
-									"parameters": {
-										"angle": "PlaceHolderZombieBody.Angle"
-									}
-								},
-								{
-									"id": "set-enabled",
-									"objectClass": "ZombieCorpse",
-									"sid": 566737004450788,
-									"behaviorType": "Solid",
-									"parameters": {
-										"state": "enabled"
-									}
 								}
 							],
-							"sid": 497582866875105
+							"sid": 497582866875105,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [],
+									"actions": [
+										{
+											"id": "set-gravity",
+											"objectClass": "ZombieCorpse",
+											"sid": 322865692512606,
+											"behaviorType": "Platform",
+											"parameters": {
+												"gravity": "0"
+											}
+										},
+										{
+											"id": "set-position",
+											"objectClass": "ZombieCorpse",
+											"sid": 126717336753426,
+											"parameters": {
+												"x": "PlaceHolderZombieBody.X",
+												"y": "PlaceHolderZombieBody.Y"
+											}
+										},
+										{
+											"id": "set-angle",
+											"objectClass": "ZombieCorpse",
+											"sid": 825977746383185,
+											"parameters": {
+												"angle": "PlaceHolderZombieBody.Angle"
+											}
+										},
+										{
+											"id": "set-enabled",
+											"objectClass": "ZombieCorpse",
+											"sid": 190469499185866,
+											"behaviorType": "Solid",
+											"parameters": {
+												"state": "enabled"
+											}
+										}
+									],
+									"sid": 293606414485962
+								}
+							]
 						}
 					]
 				}
@@ -549,7 +581,132 @@
 					}
 				}
 			],
-			"sid": 865747233035085
+			"sid": 865747233035085,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "pick-nearestfurthest",
+							"objectClass": "heart",
+							"sid": 854544455983080,
+							"parameters": {
+								"which": "nearest",
+								"x": "230",
+								"y": "80"
+							}
+						},
+						{
+							"id": "compare-x",
+							"objectClass": "heart",
+							"sid": 917879187747613,
+							"parameters": {
+								"comparison": 0,
+								"x-co-ordinate": "230"
+							}
+						},
+						{
+							"id": "compare-x",
+							"objectClass": "heart",
+							"sid": 479992423944445,
+							"parameters": {
+								"comparison": 1,
+								"x-co-ordinate": "300"
+							}
+						},
+						{
+							"id": "compare-x",
+							"objectClass": "heart",
+							"sid": 917665112852046,
+							"parameters": {
+								"comparison": 1,
+								"x-co-ordinate": "370"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "heart",
+							"sid": 233185861167182
+						}
+					],
+					"sid": 362189143489622
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "pick-nearestfurthest",
+							"objectClass": "heart",
+							"sid": 697888368503937,
+							"parameters": {
+								"which": "nearest",
+								"x": "300",
+								"y": "80"
+							}
+						},
+						{
+							"id": "compare-x",
+							"objectClass": "heart",
+							"sid": 299317781054559,
+							"parameters": {
+								"comparison": 0,
+								"x-co-ordinate": "300"
+							}
+						},
+						{
+							"id": "compare-x",
+							"objectClass": "heart",
+							"sid": 367002739209895,
+							"parameters": {
+								"comparison": 1,
+								"x-co-ordinate": "370"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "heart",
+							"sid": 972977597014396
+						}
+					],
+					"sid": 849476632127227
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "pick-nearestfurthest",
+							"objectClass": "heart",
+							"sid": 431195405720239,
+							"parameters": {
+								"which": "nearest",
+								"x": "370",
+								"y": "80"
+							}
+						},
+						{
+							"id": "compare-x",
+							"objectClass": "heart",
+							"sid": 697046526911407,
+							"parameters": {
+								"comparison": 0,
+								"x-co-ordinate": "370"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "heart",
+							"sid": 960622212003695
+						}
+					],
+					"sid": 636562920347248
+				}
+			]
 		},
 		{
 			"eventType": "block",
@@ -711,6 +868,58 @@
 							"sid": 461757384451607
 						}
 					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 490429646077291
+						}
+					],
+					"actions": [
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 824751120136475,
+							"parameters": {
+								"object-to-create": "heart",
+								"layer": "0",
+								"x": "230",
+								"y": "80",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						},
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 748442568007911,
+							"parameters": {
+								"object-to-create": "heart",
+								"layer": "0",
+								"x": "300",
+								"y": "80",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						},
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 915514745812335,
+							"parameters": {
+								"object-to-create": "heart",
+								"layer": "0",
+								"x": "370",
+								"y": "80",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						}
+					],
+					"sid": 289919774092729
 				}
 			],
 			"sid": 505744088281447

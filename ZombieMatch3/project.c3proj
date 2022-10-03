@@ -128,7 +128,8 @@
 			"PlaceHolderZombieBody",
 			"RestartImage",
 			"NextLevel",
-			"NextLevelContainer"
+			"NextLevelContainer",
+			"heart"
 		],
 		"subfolders": []
 	},
@@ -140,8 +141,6 @@
 	},
 	"layouts": {
 		"items": [
-			"Layout 1",
-			"GraveYard",
 			"Layout 2",
 			"Layout 3"
 		],
