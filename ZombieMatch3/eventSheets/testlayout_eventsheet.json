@@ -581,132 +581,7 @@
 					}
 				}
 			],
-			"sid": 865747233035085,
-			"children": [
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "pick-nearestfurthest",
-							"objectClass": "heart",
-							"sid": 854544455983080,
-							"parameters": {
-								"which": "nearest",
-								"x": "230",
-								"y": "80"
-							}
-						},
-						{
-							"id": "compare-x",
-							"objectClass": "heart",
-							"sid": 917879187747613,
-							"parameters": {
-								"comparison": 0,
-								"x-co-ordinate": "230"
-							}
-						},
-						{
-							"id": "compare-x",
-							"objectClass": "heart",
-							"sid": 479992423944445,
-							"parameters": {
-								"comparison": 1,
-								"x-co-ordinate": "300"
-							}
-						},
-						{
-							"id": "compare-x",
-							"objectClass": "heart",
-							"sid": 917665112852046,
-							"parameters": {
-								"comparison": 1,
-								"x-co-ordinate": "370"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "destroy",
-							"objectClass": "heart",
-							"sid": 233185861167182
-						}
-					],
-					"sid": 362189143489622
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "pick-nearestfurthest",
-							"objectClass": "heart",
-							"sid": 697888368503937,
-							"parameters": {
-								"which": "nearest",
-								"x": "300",
-								"y": "80"
-							}
-						},
-						{
-							"id": "compare-x",
-							"objectClass": "heart",
-							"sid": 299317781054559,
-							"parameters": {
-								"comparison": 0,
-								"x-co-ordinate": "300"
-							}
-						},
-						{
-							"id": "compare-x",
-							"objectClass": "heart",
-							"sid": 367002739209895,
-							"parameters": {
-								"comparison": 1,
-								"x-co-ordinate": "370"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "destroy",
-							"objectClass": "heart",
-							"sid": 972977597014396
-						}
-					],
-					"sid": 849476632127227
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "pick-nearestfurthest",
-							"objectClass": "heart",
-							"sid": 431195405720239,
-							"parameters": {
-								"which": "nearest",
-								"x": "370",
-								"y": "80"
-							}
-						},
-						{
-							"id": "compare-x",
-							"objectClass": "heart",
-							"sid": 697046526911407,
-							"parameters": {
-								"comparison": 0,
-								"x-co-ordinate": "370"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "destroy",
-							"objectClass": "heart",
-							"sid": 960622212003695
-						}
-					],
-					"sid": 636562920347248
-				}
-			]
+			"sid": 865747233035085
 		},
 		{
 			"eventType": "block",
@@ -873,53 +748,26 @@
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "on-start-of-layout",
-							"objectClass": "System",
-							"sid": 490429646077291
+							"id": "compare-x",
+							"objectClass": "Player",
+							"sid": 586518034661643,
+							"parameters": {
+								"comparison": 5,
+								"x-co-ordinate": "1920"
+							}
 						}
 					],
 					"actions": [
 						{
-							"id": "create-object",
+							"id": "go-to-nextprevious-layout",
 							"objectClass": "System",
-							"sid": 824751120136475,
+							"sid": 510453704297133,
 							"parameters": {
-								"object-to-create": "heart",
-								"layer": "0",
-								"x": "230",
-								"y": "80",
-								"create-hierarchy": false,
-								"template-name": "\"\""
-							}
-						},
-						{
-							"id": "create-object",
-							"objectClass": "System",
-							"sid": 748442568007911,
-							"parameters": {
-								"object-to-create": "heart",
-								"layer": "0",
-								"x": "300",
-								"y": "80",
-								"create-hierarchy": false,
-								"template-name": "\"\""
-							}
-						},
-						{
-							"id": "create-object",
-							"objectClass": "System",
-							"sid": 915514745812335,
-							"parameters": {
-								"object-to-create": "heart",
-								"layer": "0",
-								"x": "370",
-								"y": "80",
-								"create-hierarchy": false,
-								"template-name": "\"\""
+								"which": "next"
 							}
 						}
 					],
-					"sid": 289919774092729
+					"sid": 754411445524175
 				}
 			],
 			"sid": 505744088281447

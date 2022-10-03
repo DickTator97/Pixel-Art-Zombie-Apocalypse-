@@ -129,7 +129,8 @@
 			"RestartImage",
 			"NextLevel",
 			"NextLevelContainer",
-			"heart"
+			"heart",
+			"youWin"
 		],
 		"subfolders": []
 	},
@@ -142,7 +143,9 @@
 	"layouts": {
 		"items": [
 			"Layout 2",
-			"Layout 3"
+			"Layout 3",
+			"Layout 5",
+			"Layout 4"
 		],
 		"subfolders": []
 	},
