@@ -6,19 +6,19 @@
 	"instanceVariables": [],
 	"behaviorTypes": [
 		{
-			"behaviorId": "solid",
-			"name": "Solid",
-			"sid": 774992186489744
-		},
-		{
-			"behaviorId": "Physics",
-			"name": "Physics",
-			"sid": 712563002250850
-		},
-		{
 			"behaviorId": "Platform",
 			"name": "Platform",
-			"sid": 804974533009139
+			"sid": 504682385346354
+		},
+		{
+			"behaviorId": "Pin",
+			"name": "Pin",
+			"sid": 620245194741816
+		},
+		{
+			"behaviorId": "solid",
+			"name": "Solid",
+			"sid": 706206918250292
 		}
 	],
 	"effectTypes": [],
@@ -32,27 +32,19 @@
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
-						"exportFormat": "png",
+						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"imageSpriteId": 6123844,
 						"collisionPoly": {
 							"points": [
 								0,
-								0.8028333560398648,
+								0.8028334014529285,
 								0,
-								0.3273809183211555,
-								0.31876201375325525,
-								0.32492854872203997,
-								0.4928574335007439,
-								0.3259046256655737,
+								0.2748016440679157,
+								0.9976191929408482,
+								0.28571424030122283,
 								1,
-								0.3415476417541506,
-								1,
-								0.4672619501749675,
-								1,
-								0.8028333560398646,
-								0.4976190839494978,
-								0.7998570974440804
+								0.8147381179446274
 							]
 						},
 						"useCollisionPoly": true,

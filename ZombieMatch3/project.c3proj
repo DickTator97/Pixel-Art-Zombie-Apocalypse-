@@ -1,6 +1,6 @@
 {
 	"projectFormatVersion": 1,
-	"savedWithRelease": 30200,
+	"savedWithRelease": 30802,
 	"name": "Error 404",
 	"runtime": "c3",
 	"useWorker": "auto",
@@ -11,7 +11,7 @@
 			"id": "Sprite",
 			"name": "Sprite",
 			"author": "Scirra",
-			"version": "r302",
+			"version": "r308.2",
 			"bundled": false
 		},
 		{
@@ -19,7 +19,7 @@
 			"id": "Mouse",
 			"name": "Mouse",
 			"author": "Scirra",
-			"version": "r302",
+			"version": "r308.2",
 			"bundled": false
 		},
 		{
@@ -27,7 +27,7 @@
 			"id": "Keyboard",
 			"name": "Keyboard",
 			"author": "Scirra",
-			"version": "r302",
+			"version": "r308.2",
 			"bundled": false
 		},
 		{
@@ -35,31 +35,7 @@
 			"id": "Text",
 			"name": "Text",
 			"author": "Scirra",
-			"version": "r302",
-			"bundled": false
-		},
-		{
-			"type": "plugin",
-			"id": "Arr",
-			"name": "Array",
-			"author": "Scirra",
-			"version": "r302",
-			"bundled": false
-		},
-		{
-			"type": "behavior",
-			"id": "Physics",
-			"name": "Physics",
-			"author": "Scirra",
-			"version": "r302",
-			"bundled": false
-		},
-		{
-			"type": "behavior",
-			"id": "Platform",
-			"name": "Platform",
-			"author": "Scirra",
-			"version": "r302",
+			"version": "r308.2",
 			"bundled": false
 		},
 		{
@@ -67,7 +43,31 @@
 			"id": "bound",
 			"name": "Bound to layout",
 			"author": "Scirra",
-			"version": "r302",
+			"version": "r308.2",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Physics",
+			"name": "Physics",
+			"author": "Scirra",
+			"version": "r308.2",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Platform",
+			"name": "Platform",
+			"author": "Scirra",
+			"version": "r308.2",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Pathfinding",
+			"name": "Pathfinding",
+			"author": "Scirra",
+			"version": "r308.2",
 			"bundled": false
 		},
 		{
@@ -75,7 +75,7 @@
 			"id": "solid",
 			"name": "Solid",
 			"author": "Scirra",
-			"version": "r302",
+			"version": "r308.2",
 			"bundled": false
 		},
 		{
@@ -83,7 +83,7 @@
 			"id": "Bullet",
 			"name": "Bullet",
 			"author": "Scirra",
-			"version": "r302",
+			"version": "r308.2",
 			"bundled": false
 		},
 		{
@@ -91,7 +91,15 @@
 			"id": "destroy",
 			"name": "Destroy outside layout",
 			"author": "Scirra",
-			"version": "r302",
+			"version": "r308.2",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Pin",
+			"name": "Pin",
+			"author": "Scirra",
+			"version": "r308.2",
 			"bundled": false
 		}
 	],
@@ -110,10 +118,19 @@
 			"ground2d",
 			"Sprite5",
 			"CoreMechanic",
-			"MinDistanceMonitor",
-			"Array",
+			"BloodSprite",
+			"HealthMonitor",
+			"Sprite6",
+			"sprites",
 			"Ground",
-			"Text"
+			"TallGround",
+			"NextLevelGround",
+			"PlaceHolderZombieBody",
+			"RestartImage",
+			"NextLevel",
+			"NextLevelContainer",
+			"heart",
+			"youWin"
 		],
 		"subfolders": []
 	},
@@ -125,8 +142,10 @@
 	},
 	"layouts": {
 		"items": [
-			"Layout 1",
-			"TestLayout"
+			"Layout 2",
+			"Layout 3",
+			"Layout 5",
+			"Layout 4"
 		],
 		"subfolders": []
 	},
@@ -281,7 +300,8 @@
 		"loaderStyle": "splash",
 		"preloadSounds": true,
 		"cordovaiOSScheme": "app",
-		"cordovaAndroidScheme": "https"
+		"cordovaAndroidScheme": "https",
+		"autoReloadScriptsOnPreview": false
 	},
 	"viewportWidth": 1920,
 	"viewportHeight": 1080,

@@ -1,0 +1,16 @@
+{
+	"name": "HealthMonitor",
+	"plugin-id": "Text",
+	"sid": 562389846090782,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "PlayersHealthMonitor",
+			"type": "number",
+			"desc": "",
+			"sid": 634142117376606
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": []
+}

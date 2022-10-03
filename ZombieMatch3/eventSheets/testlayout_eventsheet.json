@@ -3,63 +3,13 @@
 	"events": [
 		{
 			"eventType": "variable",
-			"name": "ZombiesHealth",
-			"type": "number",
-			"initialValue": "3",
+			"name": "IsDragging",
+			"type": "boolean",
+			"initialValue": "false",
 			"comment": "",
 			"isStatic": false,
 			"isConstant": false,
-			"sid": 612076365706383
-		},
-		{
-			"eventType": "variable",
-			"name": "CorpseMovementDirection",
-			"type": "number",
-			"initialValue": "1",
-			"comment": "",
-			"isStatic": false,
-			"isConstant": false,
-			"sid": 811115987868147
-		},
-		{
-			"eventType": "variable",
-			"name": "MaxDistance",
-			"type": "number",
-			"initialValue": "300",
-			"comment": "",
-			"isStatic": false,
-			"isConstant": false,
-			"sid": 306669355603573
-		},
-		{
-			"eventType": "variable",
-			"name": "TmpDistance",
-			"type": "number",
-			"initialValue": "0",
-			"comment": "",
-			"isStatic": false,
-			"isConstant": false,
-			"sid": 858860523072247
-		},
-		{
-			"eventType": "variable",
-			"name": "PlayerPosition",
-			"type": "number",
-			"initialValue": "0",
-			"comment": "",
-			"isStatic": false,
-			"isConstant": false,
-			"sid": 291845230003953
-		},
-		{
-			"eventType": "variable",
-			"name": "CurrentMinDistance",
-			"type": "number",
-			"initialValue": "0",
-			"comment": "",
-			"isStatic": false,
-			"isConstant": false,
-			"sid": 129721248859829
+			"sid": 986502620347009
 		},
 		{
 			"eventType": "block",
@@ -68,10 +18,29 @@
 					"id": "on-click",
 					"objectClass": "Mouse",
 					"sid": 319358502343420,
+					"disabled": true,
 					"parameters": {
 						"mouse-button": "left",
 						"click-type": "clicked"
 					}
+				},
+				{
+					"id": "cursor-is-over-object",
+					"objectClass": "Mouse",
+					"sid": 513620972710433,
+					"parameters": {
+						"object": "RestartImage"
+					},
+					"isInverted": true
+				},
+				{
+					"id": "cursor-is-over-object",
+					"objectClass": "Mouse",
+					"sid": 524163970322857,
+					"parameters": {
+						"object": "NextLevelContainer"
+					},
+					"isInverted": true
 				}
 			],
 			"actions": [
@@ -79,6 +48,7 @@
 					"id": "create-object",
 					"objectClass": "System",
 					"sid": 281992600601139,
+					"disabled": true,
 					"parameters": {
 						"object-to-create": "Sprite3",
 						"layer": "0",
@@ -95,6 +65,36 @@
 			"eventType": "block",
 			"conditions": [
 				{
+					"id": "on-click",
+					"objectClass": "Mouse",
+					"sid": 178368874895048,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked"
+					}
+				},
+				{
+					"id": "cursor-is-over-object",
+					"objectClass": "Mouse",
+					"sid": 892379166150632,
+					"parameters": {
+						"object": "RestartImage"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "restart-layout",
+					"objectClass": "System",
+					"sid": 809212232737217
+				}
+			],
+			"sid": 715650857201394
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
 					"id": "on-collision-with-another-object",
 					"objectClass": "Sprite3",
 					"sid": 255898540395804,
@@ -105,33 +105,95 @@
 			],
 			"actions": [
 				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 760482374988692,
+					"parameters": {
+						"object-to-create": "BloodSprite",
+						"layer": "0",
+						"x": "zombie1.X - 25",
+						"y": "zombie1.Y",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "rotate-counter-clockwise",
+					"objectClass": "BloodSprite",
+					"sid": 501064605421830,
+					"parameters": {
+						"degrees": "90"
+					}
+				},
+				{
 					"id": "destroy",
 					"objectClass": "Sprite3",
 					"sid": 703046233256122
 				},
 				{
-					"id": "add-to-eventvar",
-					"objectClass": "System",
-					"sid": 982279824125375,
+					"id": "add-to-instvar",
+					"objectClass": "zombie1",
+					"sid": 415500497578950,
 					"parameters": {
-						"variable": "ZombiesHealth",
+						"instance-variable": "Health",
 						"value": "-1"
+					}
+				},
+				{
+					"id": "set-default-color",
+					"objectClass": "BloodSprite",
+					"sid": 750856823167521,
+					"parameters": {
+						"color": "rgbEx(25, 2, 109)"
+					}
+				},
+				{
+					"id": "find-path",
+					"objectClass": "zombie1",
+					"sid": 160389546537864,
+					"behaviorType": "Pathfinding",
+					"parameters": {
+						"x": "Player.X",
+						"y": "Player.Y"
 					}
 				}
 			],
-			"sid": 445197738759976
+			"sid": 445197738759976,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-mirrored",
+							"objectClass": "Player",
+							"sid": 357660794123833
+						}
+					],
+					"actions": [
+						{
+							"id": "set-mirrored",
+							"objectClass": "zombie1",
+							"sid": 206175795493603,
+							"parameters": {
+								"state": "not-mirrored"
+							}
+						}
+					],
+					"sid": 163659711217246
+				}
+			]
 		},
 		{
 			"eventType": "block",
 			"conditions": [
 				{
-					"id": "compare-two-values",
-					"objectClass": "System",
-					"sid": 400210424777903,
+					"id": "compare-instance-variable",
+					"objectClass": "zombie1",
+					"sid": 481674487404086,
 					"parameters": {
-						"first-value": "ZombiesHealth",
+						"instance-variable": "Health",
 						"comparison": 0,
-						"second-value": "0"
+						"value": "0"
 					}
 				}
 			],
@@ -139,12 +201,12 @@
 				{
 					"id": "destroy",
 					"objectClass": "zombie1",
-					"sid": 923078281689774
+					"sid": 954819116167703
 				},
 				{
 					"id": "create-object",
 					"objectClass": "System",
-					"sid": 163590737778006,
+					"sid": 535208054806273,
 					"parameters": {
 						"object-to-create": "ZombieCorpse",
 						"layer": "0",
@@ -155,12 +217,12 @@
 					}
 				},
 				{
-					"id": "set-eventvar-value",
-					"objectClass": "System",
-					"sid": 190021984170120,
+					"id": "set-enabled",
+					"objectClass": "ZombieCorpse",
+					"sid": 745787475856618,
+					"behaviorType": "Solid",
 					"parameters": {
-						"variable": "ZombiesHealth",
-						"value": "-1"
+						"state": "disabled"
 					}
 				}
 			],
@@ -170,100 +232,248 @@
 			"eventType": "block",
 			"conditions": [
 				{
-					"id": "every-tick",
-					"objectClass": "System",
-					"sid": 951893155108347
-				}
-			],
-			"actions": [
-				{
-					"id": "set-eventvar-value",
-					"objectClass": "System",
-					"sid": 326775570377313,
+					"id": "on-key-pressed",
+					"objectClass": "CoreMechanic",
+					"sid": 631259955594936,
 					"parameters": {
-						"variable": "CurrentMinDistance",
-						"value": "distance(Player.X,Player.Y,ZombieCorpse.X,ZombieCorpse.Y)"
+						"key": 70
 					}
 				}
 			],
-			"sid": 149077384091253,
+			"actions": [],
+			"sid": 540867022115365,
 			"children": [
 				{
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "for-each",
-							"objectClass": "System",
-							"sid": 260097988772451,
+							"id": "pick-nearestfurthest",
+							"objectClass": "ZombieCorpse",
+							"sid": 590665533159259,
+							"parameters": {
+								"which": "nearest",
+								"x": "Player.X",
+								"y": "Player.Y"
+							}
+						},
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "Player",
+							"sid": 338992630706403,
 							"parameters": {
 								"object": "ZombieCorpse"
 							}
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 117761591638642,
+							"parameters": {
+								"variable": "IsDragging"
+							},
+							"isInverted": true
 						}
 					],
 					"actions": [
 						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 257712384414141,
+							"id": "pin-to-object-properties",
+							"objectClass": "ZombieCorpse",
+							"sid": 932486544764231,
+							"behaviorType": "Pin",
 							"parameters": {
-								"variable": "TmpDistance",
-								"value": "distance(Player.X,Player.Y, ZombieCorpse.X,ZombieCorpse.Y)"
+								"pin-to": "Player",
+								"x": true,
+								"y": true,
+								"angle": true,
+								"width-type": "no",
+								"height-type": "no",
+								"z": false
+							}
+						},
+						{
+							"id": "set-gravity",
+							"objectClass": "ZombieCorpse",
+							"sid": 360436220510455,
+							"behaviorType": "Platform",
+							"parameters": {
+								"gravity": "1000"
+							}
+						},
+						{
+							"id": "set-angle",
+							"objectClass": "ZombieCorpse",
+							"sid": 117579153717658,
+							"parameters": {
+								"angle": "0"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 669585932729483,
+							"parameters": {
+								"variable": "IsDragging",
+								"value": "true"
 							}
 						}
 					],
-					"sid": 957590842415972,
+					"sid": 676262872114123
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-released",
+					"objectClass": "CoreMechanic",
+					"sid": 779579046439083,
+					"parameters": {
+						"key": 70
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "unpin",
+					"objectClass": "ZombieCorpse",
+					"sid": 124194031862350,
+					"behaviorType": "Pin"
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 395123836766760,
+					"parameters": {
+						"variable": "IsDragging",
+						"value": "false"
+					}
+				}
+			],
+			"sid": 675215785510646,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "pick-nearestfurthest",
+							"objectClass": "PlaceHolderZombieBody",
+							"sid": 693409043829667,
+							"parameters": {
+								"which": "nearest",
+								"x": "Player.X",
+								"y": "Player.Y"
+							}
+						},
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "PlaceHolderZombieBody",
+							"sid": 658794390778646,
+							"parameters": {
+								"instance-variable": "IsAvailable"
+							}
+						},
+						{
+							"id": "pick-nearestfurthest",
+							"objectClass": "ZombieCorpse",
+							"sid": 356852201546522,
+							"parameters": {
+								"which": "nearest",
+								"x": "Player.X",
+								"y": "Player.Y"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 698455915194842,
 					"children": [
 						{
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "compare-two-values",
-									"objectClass": "System",
-									"sid": 826942524932925,
+									"id": "compare-x",
+									"objectClass": "ZombieCorpse",
+									"sid": 412034157786871,
 									"parameters": {
-										"first-value": "TmpDistance",
-										"comparison": 3,
-										"second-value": "CurrentMinDistance"
+										"comparison": 5,
+										"x-co-ordinate": "PlaceHolderZombieBody.X-100"
 									}
+								},
+								{
+									"id": "compare-x",
+									"objectClass": "ZombieCorpse",
+									"sid": 758386182592146,
+									"parameters": {
+										"comparison": 3,
+										"x-co-ordinate": "PlaceHolderZombieBody.X+100"
+									}
+								},
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "PlaceHolderZombieBody",
+									"sid": 294119583886674,
+									"parameters": {
+										"object": "Player"
+									},
+									"isInverted": true
 								}
 							],
 							"actions": [
 								{
-									"id": "set-eventvar-value",
-									"objectClass": "System",
-									"sid": 781628958162565,
+									"id": "set-boolean-instvar",
+									"objectClass": "PlaceHolderZombieBody",
+									"sid": 626479564041031,
 									"parameters": {
-										"variable": "CurrentMinDistance",
-										"value": "TmpDistance"
-									}
-								},
-								{
-									"id": "set-text",
-									"objectClass": "MinDistanceMonitor",
-									"sid": 141792768777459,
-									"parameters": {
-										"text": "\"distance from closest zombie: \"& CurrentMinDistance"
-									}
-								},
-								{
-									"id": "set-eventvar-value",
-									"objectClass": "System",
-									"sid": 258335654628647,
-									"parameters": {
-										"variable": "CorpseMovementDirection",
-										"value": "(ZombieCorpse.X-Player.X)/abs(ZombieCorpse.X-Player.X)"
-									}
-								},
-								{
-									"id": "set-text",
-									"objectClass": "Text",
-									"sid": 327288801166116,
-									"parameters": {
-										"text": "\"Direction from closest zombie: \" &CorpseMovementDirection"
+										"instance-variable": "IsAvailable",
+										"value": "false"
 									}
 								}
 							],
-							"sid": 693079871026788
+							"sid": 497582866875105,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [],
+									"actions": [
+										{
+											"id": "set-gravity",
+											"objectClass": "ZombieCorpse",
+											"sid": 322865692512606,
+											"behaviorType": "Platform",
+											"parameters": {
+												"gravity": "0"
+											}
+										},
+										{
+											"id": "set-position",
+											"objectClass": "ZombieCorpse",
+											"sid": 126717336753426,
+											"parameters": {
+												"x": "PlaceHolderZombieBody.X",
+												"y": "PlaceHolderZombieBody.Y"
+											}
+										},
+										{
+											"id": "set-angle",
+											"objectClass": "ZombieCorpse",
+											"sid": 825977746383185,
+											"parameters": {
+												"angle": "PlaceHolderZombieBody.Angle"
+											}
+										},
+										{
+											"id": "set-enabled",
+											"objectClass": "ZombieCorpse",
+											"sid": 190469499185866,
+											"behaviorType": "Solid",
+											"parameters": {
+												"state": "enabled"
+											}
+										}
+									],
+									"sid": 293606414485962
+								}
+							]
 						}
 					]
 				}
@@ -273,72 +483,261 @@
 			"eventType": "block",
 			"conditions": [
 				{
-					"id": "key-is-down",
-					"objectClass": "CoreMechanic",
-					"sid": 888259049428232,
-					"parameters": {
-						"key": 70
-					}
-				},
+					"id": "on-path-found",
+					"objectClass": "zombie1",
+					"sid": 973973121962634,
+					"behaviorType": "Pathfinding"
+				}
+			],
+			"actions": [
 				{
-					"id": "compare-two-values",
-					"objectClass": "System",
-					"sid": 569193696598977,
-					"parameters": {
-						"first-value": "MaxDistance",
-						"comparison": 4,
-						"second-value": "CurrentMinDistance"
-					}
-				},
+					"id": "move-along-path",
+					"objectClass": "zombie1",
+					"sid": 169429891476845,
+					"behaviorType": "Pathfinding"
+				}
+			],
+			"sid": 574671294942970
+		},
+		{
+			"eventType": "block",
+			"conditions": [
 				{
-					"id": "for-each",
-					"objectClass": "System",
-					"sid": 707775315429002,
+					"id": "on-collision-with-another-object",
+					"objectClass": "zombie1",
+					"sid": 113719570083062,
 					"parameters": {
-						"object": "ZombieCorpse"
+						"object": "Player"
 					}
 				}
 			],
-			"actions": [],
-			"sid": 613611431802463,
+			"actions": [
+				{
+					"id": "subtract-from-instvar",
+					"objectClass": "Player",
+					"sid": 342523357321837,
+					"parameters": {
+						"instance-variable": "PlayerHealth",
+						"value": "1"
+					}
+				},
+				{
+					"id": "set-vector-x",
+					"objectClass": "Player",
+					"sid": 343247550513987,
+					"behaviorType": "Platform",
+					"parameters": {
+						"vector-x": "-1000"
+					}
+				},
+				{
+					"id": "set-vector-y",
+					"objectClass": "Player",
+					"sid": 165430302103660,
+					"behaviorType": "Platform",
+					"parameters": {
+						"vector-y": "-500"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "HealthMonitor",
+					"sid": 720694145160492,
+					"parameters": {
+						"text": "\"Health:\" & Player.PlayerHealth"
+					}
+				}
+			],
+			"sid": 865747233035085
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "Player",
+					"sid": 589209372723815,
+					"parameters": {
+						"instance-variable": "PlayerHealth",
+						"comparison": 3,
+						"value": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "Player",
+					"sid": 990517608850440
+				}
+			],
+			"sid": 635825682847170
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "EnemyEvents",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [],
+			"sid": 189143142789601
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Movement Check",
+			"description": "",
+			"isActiveOnStart": true,
 			"children": [
 				{
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "compare-eventvar",
-							"objectClass": "System",
-							"sid": 330262581299546,
+							"id": "on-key-pressed",
+							"objectClass": "CoreMechanic",
+							"sid": 901543149166627,
 							"parameters": {
-								"variable": "CurrentMinDistance",
-								"comparison": 0,
-								"value": "distance(player.X,Player.Y,ZombieCorpse.X,ZombieCorpse.Y)"
+								"key": 39
 							}
 						}
 					],
 					"actions": [
 						{
-							"id": "set-position",
-							"objectClass": "ZombieCorpse",
-							"sid": 737321767192489,
+							"id": "set-mirrored",
+							"objectClass": "Player",
+							"sid": 622091210661988,
 							"parameters": {
-								"x": "Player.X+200*CorpseMovementDirection",
-								"y": "Player.Y+20"
-							}
-						},
-						{
-							"id": "set-gravity",
-							"objectClass": "ZombieCorpse",
-							"sid": 275015484110492,
-							"behaviorType": "Platform",
-							"parameters": {
-								"gravity": "0"
+								"state": "not-mirrored"
 							}
 						}
 					],
-					"sid": 829874562488605
+					"sid": 497769210516553
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "CoreMechanic",
+							"sid": 103361526792482,
+							"parameters": {
+								"key": 37
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-mirrored",
+							"objectClass": "Player",
+							"sid": 891887862427297,
+							"parameters": {
+								"state": "mirrored"
+							}
+						}
+					],
+					"sid": 982482788076333
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-click",
+							"objectClass": "Mouse",
+							"sid": 361624254008215,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "spawn-another-object",
+							"objectClass": "Player",
+							"sid": 609733786611866,
+							"parameters": {
+								"object": "Sprite3",
+								"layer": "0",
+								"image-point": "1",
+								"create-hierarchy": false
+							}
+						}
+					],
+					"sid": 430936790591404,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-mirrored",
+									"objectClass": "Player",
+									"sid": 367779716849106
+								}
+							],
+							"actions": [
+								{
+									"id": "set-speed",
+									"objectClass": "Sprite3",
+									"sid": 750366453728194,
+									"behaviorType": "Bullet",
+									"parameters": {
+										"speed": "- 800"
+									}
+								}
+							],
+							"sid": 139587989951108
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 719594194566033
+								}
+							],
+							"actions": [
+								{
+									"id": "set-speed",
+									"objectClass": "Sprite3",
+									"sid": 484619721007960,
+									"behaviorType": "Bullet",
+									"parameters": {
+										"speed": "800"
+									}
+								}
+							],
+							"sid": 461757384451607
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-x",
+							"objectClass": "Player",
+							"sid": 586518034661643,
+							"parameters": {
+								"comparison": 5,
+								"x-co-ordinate": "1920"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "go-to-nextprevious-layout",
+							"objectClass": "System",
+							"sid": 510453704297133,
+							"parameters": {
+								"which": "next"
+							}
+						}
+					],
+					"sid": 754411445524175
 				}
-			]
+			],
+			"sid": 505744088281447
 		}
 	],
 	"sid": 409331247530026
