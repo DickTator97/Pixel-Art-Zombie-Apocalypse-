@@ -95,39 +95,6 @@
 			"eventType": "block",
 			"conditions": [
 				{
-					"id": "on-click",
-					"objectClass": "Mouse",
-					"sid": 647359390171571,
-					"parameters": {
-						"mouse-button": "left",
-						"click-type": "clicked"
-					}
-				},
-				{
-					"id": "cursor-is-over-object",
-					"objectClass": "Mouse",
-					"sid": 837893345119436,
-					"parameters": {
-						"object": "NextLevelContainer"
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "go-to-nextprevious-layout",
-					"objectClass": "System",
-					"sid": 334603689736188,
-					"parameters": {
-						"which": "next"
-					}
-				}
-			],
-			"sid": 328768632564299
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
 					"id": "on-collision-with-another-object",
 					"objectClass": "Sprite3",
 					"sid": 255898540395804,

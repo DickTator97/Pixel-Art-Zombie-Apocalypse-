@@ -151,7 +151,6 @@
 	},
 	"eventSheets": {
 		"items": [
-			"Event sheet 1",
 			"TestLayout_EventSheet"
 		],
 		"subfolders": []
